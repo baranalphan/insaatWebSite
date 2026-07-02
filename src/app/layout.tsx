@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "../styles/site-index.css";
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "Будівельна компанія LAGOM: Продаж будинків поблизу Львова",
+  description:
+    "Котеджі комфорт та преміум класу. ✓Безпека території, ✓професійний ландшафт, ✓власна управляюча компанія, ✓ергономічні планування. 093 606 0300",
+  icons: {
+    icon: [
+      { url: "/seo/favicon.webp", sizes: "32x32" },
+      { url: "/seo/favicon.webp", sizes: "192x192" },
+    ],
+    apple: "/seo/favicon.webp",
+  },
+  openGraph: {
+    images: ["/seo/og-logo-black.webp"],
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="uk">
+      <body>{children}</body>
     </html>
   );
 }
