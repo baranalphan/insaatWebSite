@@ -1,0 +1,61 @@
+"use client";
+
+import { Btn } from "@/components/site/Btn";
+import { usePopups } from "@/components/site/Popups";
+import { FadeIn } from "@/components/site/effects";
+
+export function HomeIntro() {
+  const { openCallback } = usePopups();
+
+  return (
+    <section className="intro">
+      <div className="container md-space">
+        <div className="container-index">001</div>
+        <div className="container-kivi fit-cover">
+          <picture data-speed="clamp(0.85)">
+            <source
+              media="(max-width: 1024px)"
+              srcSet="/images/2026_02_lagom-main-kv-mobile.webp 720w, /images/2026_02_lagom-main-kv-mobile-169x300.webp 169w, /images/2026_02_lagom-main-kv-mobile-576x1024.webp 576w, /images/2026_02_lagom-main-kv-mobile-436x775.webp 436w, /images/2026_02_lagom-main-kv-mobile-240x427.webp 240w, /images/2026_02_lagom-main-kv-mobile-461x820.webp 461w, /images/2026_02_lagom-main-kv-mobile-360x640.webp 360w, /images/2026_02_lagom-main-kv-mobile-300x533.webp 300w, /images/2026_02_lagom-main-kv-mobile-225x400.webp 225w"
+              sizes="100vw"
+            />
+            <source
+              media="(min-width: 1025px)"
+              srcSet="/images/2026_02_lagom-main-kv-desktop-2560x2620.webp 2560w, /images/2026_02_lagom-main-kv-desktop-1001x1024.webp 1001w, /images/2026_02_lagom-main-kv-desktop-293x300.webp 293w, /images/2026_02_lagom-main-kv-desktop-768x786.webp 768w, /images/2026_02_lagom-main-kv-desktop-1501x1536.webp 1501w, /images/2026_02_lagom-main-kv-desktop-2001x2048.webp 2001w, /images/2026_02_lagom-main-kv-desktop-1920x1965.webp 1920w, /images/2026_02_lagom-main-kv-desktop-1350x1382.webp 1350w, /images/2026_02_lagom-main-kv-desktop-1024x1048.webp 1024w, /images/2026_02_lagom-main-kv-desktop-720x737.webp 720w, /images/2026_02_lagom-main-kv-desktop-436x446.webp 436w, /images/2026_02_lagom-main-kv-desktop-240x246.webp 240w, /images/2026_02_lagom-main-kv-desktop-801x820.webp 801w, /images/2026_02_lagom-main-kv-desktop-760x778.webp 760w, /images/2026_02_lagom-main-kv-desktop-360x368.webp 360w, /images/2026_02_lagom-main-kv-desktop-300x307.webp 300w, /images/2026_02_lagom-main-kv-desktop-391x400.webp 391w"
+              sizes="(min-width: 2560px) 2560px, (min-width: 1920px) 1920px, 100vw"
+            />
+            <img
+              src="/images/2026_02_lagom-main-kv-desktop-1920x1965.webp"
+              alt="Lagom Development"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width="100%"
+              height="auto"
+            />
+          </picture>
+        </div>
+        <div className="container-logo">
+          <svg width="1652" height="320" viewBox="0 0 1652 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 311.581V8.64648H82.3557V233.682H214.558V311.581H0Z" fill="#F2EFE9" />
+            <path d="M241.846 311.581L356.71 8.64648H447.735L562.6 311.581H473.742L452.07 246.665H352.376L330.703 311.581H241.846ZM374.048 179.588H430.397L403.09 93.0355H401.356L374.048 179.588Z" fill="#F2EFE9" />
+            <path d="M744.88 203.395V142.808H874.916V259.653C865.956 270.621 854.686 280.718 841.107 289.948C811.049 310.146 777.531 320.242 740.546 320.242C692.284 320.242 652.047 304.736 619.83 273.719C587.605 242.708 571.5 204.842 571.5 160.119C571.5 115.402 587.605 77.5353 619.83 46.5182C652.047 15.5081 692.284 -0.00390625 740.546 -0.00390625C776.956 -0.00390625 809.465 9.80772 838.073 29.4241C850.785 38.3702 861.621 48.0329 870.581 58.4193L820.734 114.679C814.084 107.47 806.715 100.979 798.628 95.2042C779.841 82.2213 760.485 75.7298 740.546 75.7298C716.848 75.7298 696.835 83.8848 680.513 100.181C664.184 116.484 656.023 136.466 656.023 160.119C656.023 183.779 664.184 203.76 680.513 220.057C696.835 236.358 716.848 244.506 740.546 244.506C756.15 244.506 769.438 241.626 780.424 235.851C785.042 233.545 789.81 230.659 794.727 227.197V203.395H744.88Z" fill="#F2EFE9" />
+            <path d="M971.08 273.719C938.855 242.708 922.75 204.842 922.75 160.119C922.75 115.402 938.855 77.5353 971.08 46.5182C1003.3 15.5081 1043.53 -0.00390625 1091.8 -0.00390625C1140.05 -0.00390625 1180.29 15.5081 1212.51 46.5182C1244.73 77.5353 1260.84 115.402 1260.84 160.119C1260.84 204.842 1244.73 242.708 1212.51 273.719C1180.29 304.736 1140.05 320.242 1091.8 320.242C1043.53 320.242 1003.3 304.736 971.08 273.719ZM1031.76 100.181C1015.43 116.484 1007.27 136.466 1007.27 160.119C1007.27 183.779 1015.43 203.76 1031.76 220.057C1048.09 236.358 1068.1 244.506 1091.8 244.506C1115.49 244.506 1135.5 236.358 1151.83 220.057C1168.15 203.76 1176.32 183.779 1176.32 160.119C1176.32 136.466 1168.15 116.484 1151.83 100.181C1135.5 83.8848 1115.49 75.7298 1091.8 75.7298C1068.1 75.7298 1048.09 83.8848 1031.76 100.181Z" fill="#F2EFE9" />
+            <path d="M1318.13 311.593V8.6582H1391.82L1485.01 125.505L1578.2 8.6582H1651.89V311.593H1569.53V131.996L1485.01 238.021L1400.49 131.996V311.593H1318.13Z" fill="#F2EFE9" />
+          </svg>
+        </div>
+        <FadeIn className="container-arrow" />
+        <div className="container-content flex-v" data-speed="clamp(1.2)">
+          <h1 className="mulish-50">Життя у гармонії - життя у LAGOM</h1>
+          <Btn
+            label="Отримати консультацію"
+            href="#callback"
+            onClick={(e) => {
+              e.preventDefault();
+              openCallback();
+            }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
