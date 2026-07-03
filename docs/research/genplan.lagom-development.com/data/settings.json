@@ -1,0 +1,663 @@
+{
+  "genplan": {
+    "id": "genplan",
+    "generalWrapId": "#js-s3d__wrapper",
+    "imageUrl": "images/flyby/masterplan/",
+    "sd_imageUrl": "images/flyby/masterplan_mobile/",
+    "imageUrlDark": "images/flyby/masterplan_dark/",
+    "enableParalax": false,
+    "enableClouds": true,
+    "image_format": "jpg",
+    "defaultTheme": "light",
+    "class": "js-s3d__wrapper",
+    "numberSlide": {
+      "min": 0,
+      "max": 119
+    },
+    "verticalAlig_faq": "top || center || bottom",
+    "verticalAlign": "top",
+    "horizontalAlign_faq": "left || center || right",
+    "horizontalAlign": "center",
+    "video_keyframes": {},
+    "controlPoint": [
+      1,
+      31,
+      61,
+      91
+    ],
+    "activeSlide": 31,
+    "rotateSpeedDefault": 20,
+    "rotateSpeed": [
+      {
+        "min": 79,
+        "max": 100,
+        "ms": 40
+      }
+    ],
+    "frameWithNorthDirection": 100,
+    "mouseSpeed": 0.5,
+    "startDegCompass": 35
+  },
+  "flyby": {
+    "1": {
+      "outside": {
+        "id": "flyby_1_outside",
+        "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/1_outside/",
+        "sd_imageUrl": "images/flyby/1_outside_mobile/",
+        "image_format": "jpg",
+        "verticalAlign": "top",
+        "class": "js-s3d__wrapper",
+        "numberSlide": {
+          "min": 0,
+          "max": 119
+        },
+        "controlPoint": [
+          1,
+          31,
+          61,
+          91
+        ],
+        "activeSlide": 91,
+        "rotateSpeedDefault": 20,
+        "rotateSpeed": [],
+        "mouseSpeed": 0.5,
+        "startDegCompass": 40,
+        "frameWithNorthDirection": 89
+      },
+      "inside": {
+        "id": "flyby_1_inside",
+        "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/1_inside/",
+        "sd_imageUrl": "images/flyby/1_inside_mobile/",
+        "image_format": "jpg",
+        "class": "js-s3d__wrapper",
+        "verticalAlign": "bottom",
+        "numberSlide": {
+          "min": 0,
+          "max": 119
+        },
+        "controlPoint": [
+          1,
+          31,
+          61,
+          91
+        ],
+        "activeSlide": 1,
+        "rotateSpeedDefault": 20,
+        "rotateSpeed": [],
+        "mouseSpeed": 0.5,
+        "startDegCompass": 40,
+        "frameWithNorthDirection": 89
+      }
+    },
+    "2": {
+      "outside": {
+        "id": "flyby_2_outside",
+        "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/2_outside_new/",
+        "sd_imageUrl": "images/flyby/2_outside_mobile_new/",
+        "image_format": "jpg",
+        "verticalAlign": "top",
+        "class": "js-s3d__wrapper",
+        "numberSlide": {
+          "min": 0,
+          "max": 119
+        },
+        "controlPoint": [
+          1,
+          31,
+          61,
+          91
+        ],
+        "activeSlide": 31,
+        "rotateSpeedDefault": 20,
+        "rotateSpeed": [],
+        "mouseSpeed": 0.5,
+        "startDegCompass": 40,
+        "frameWithNorthDirection": 89
+      }
+    }
+  },
+  "favourites": {
+    "id": "favourites",
+    "generalWrapId": ".js-s3d__slideModule"
+  },
+  "floor": {
+    "id": "floor",
+    "generalWrapId": ".js-s3d__slideModule",
+    "polygonValueToRender1": "type",
+    "polygonValueToRender2": "area",
+    "flatPropertiesToShowInFloor": [
+      {
+        "prefix": "currency_label",
+        "key": "_price",
+        "postfix": "",
+        "type": "number",
+        "size": "large"
+      },
+      {
+        "prefix": "currency_label_m2",
+        "key": "price_m2",
+        "type": "number",
+        "postfix": ""
+      }
+    ]
+  },
+  "flat": {
+    "id": "flat",
+    "viewType_faq": "viewType може бути двох видів: flat або villa",
+    "viewType": "villa",
+    "generalWrapId": ".js-s3d__slideModule",
+    "labelsToShowInInfoBlock": [
+      {
+        "key": "area",
+        "postfix_key": "area_unit",
+        "label": "Flat.information.area"
+      },
+      {
+        "key": "build",
+        "postfix_key": "",
+        "label": "Flat.information.build"
+      },
+      {
+        "key": "floor",
+        "postfix_key": "",
+        "label": "Flat.information.floor"
+      },
+      {
+        "key": "rooms",
+        "postfix_key": "",
+        "label": "Flat.information.rooms"
+      },
+      {
+        "key": "number",
+        "postfix_key": "",
+        "label": "Flat.information.number"
+      }
+    ],
+    "faq_questions": [
+      {
+        "question": {
+          "uk": "Де знаходиться відділ продажів?"
+        },
+        "answer": {
+          "uk": "Відділ продажів знаходиться за адресою: <a target='_blank' href='https://maps.app.goo.gl/yEw5VSnttVqEdLTk7'>с. Сокільники, вул. Грушевського, Львів</a>, безпосередньо біля будівництва містечка. <br>Ми працюємо за графіком ПН-СБ, 10:00-20:00. <br>Консультації відбуваються за попереднім записом. Контакти відділу продажу <a href='tel:0936060300'>0936060300</a>."
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            6
+          ]
+        },
+        "question": {
+          "uk": "Які площі ділянок?"
+        },
+        "answer": {
+          "uk": "Площа земельних ділянок варіюється від 8 до 10 соток — залежно від обраного типу будинку та розташування."
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            6
+          ]
+        },
+        "question": {
+          "uk": "Які умови розтермінування?"
+        },
+        "answer": {
+          "uk": "Пропонуємо гнучке розтермінування до двох років з першим внеском від 30%. Детальні умови можна отримати у відділі продажів або телефоном."
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            6
+          ]
+        },
+        "question": {
+          "uk": "Які мережі проведено?"
+        },
+        "answer": {
+          "uk": "До будинків підведені всі центральні комунікації: <ul><li>– електроенергія 15кВт</li><li>– електроенергія 21кВт</li><li>– водопостачання</li><li>– каналізація</li><li>– газопостачання та газовий колет Vaillant</li></ul>"
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            6
+          ]
+        },
+        "question": {
+          "uk": "Що входить у вартість будинку?"
+        },
+        "answer": {
+          "uk": "У вартість входить:<ul><li>– земельна ділянка</li><li>– будинок з зовнішнім оздобленням</li><li>– підведені комунікації</li><li>– благоустрій прибудинкової території</li><li>– екостоянка для двох автомобілів</li></ul>"
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            1
+          ]
+        },
+        "question": {
+          "uk": "Яка площа найменшого будинку?"
+        },
+        "answer": {
+          "uk": "Площа найменшого будинку складає 126 м². "
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            1
+          ]
+        },
+        "question": {
+          "uk": "Які площі ділянок?"
+        },
+        "answer": {
+          "uk": "Площа земельних ділянок варіюється від 1,9 до 6 соток — залежно від обраного типу будинку та розташування."
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            1
+          ]
+        },
+        "question": {
+          "uk": "Які умови розтермінування?"
+        },
+        "answer": {
+          "uk": "Пропонуємо гнучке безвідсоткове розтермінування до двох років з першим внеском від 30%. Детальні умови можна отримати у відділі продажів або телефоном."
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            1
+          ]
+        },
+        "question": {
+          "uk": "Які мережі проведено?"
+        },
+        "answer": {
+          "uk": "До будинків підведені всі центральні комунікації:<ul><li>– електроенергія 15кВт</li><li>– водопостачання</li><li>– каналізація</li><li>– газопостачання та двоконтурний газовий котел Viessmann</li></ul>"
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            1
+          ]
+        },
+        "question": {
+          "uk": "Що входить у вартість будинку?"
+        },
+        "answer": {
+          "uk": "У вартість входить: <ul><li>– земельна ділянка</li><li>– будинок з зовнішнім оздобленням</li><li>– підведені комунікації</li><li>– благоустрій прибудинкової території</li><li>– екостоянка для двох автомобілів</li></ul>"
+        }
+      },
+      {
+        "ignore": {
+          "build": [
+            1
+          ]
+        },
+        "question": {
+          "uk": "Чи є вже здані будинки?"
+        },
+        "answer": {
+          "uk": "Так, у містечку вже збудовано та здано в експлуатацію 110 будинків."
+        }
+      }
+    ]
+  },
+  "plannings": {
+    "id": "plannings",
+    "generalWrapId": ".js-s3d__slideModule"
+  },
+  "filter": {
+    "viewType": "card",
+    "ranges": [
+      {
+        "title_i18n": "Filter.range.area",
+        "title_postfix_i18n": "Filter.range.area_unit",
+        "title_prefix_i18n": false,
+        "name": "area",
+        "type": "range",
+        "ignoreParams": {
+          "_price": [
+            0,
+            null
+          ]
+        }
+      },
+      {
+        "title_i18n": "Filter.range.area_land",
+        "title_postfix_i18n": "area_land_unit",
+        "title_prefix_i18n": false,
+        "name": "area_land",
+        "type": "range",
+        "ignoreParams": {
+          "_price": [
+            0,
+            null
+          ]
+        }
+      },
+      {
+        "title_i18n": "Filter.list.price",
+        "title_postfix_i18n": false,
+        "title_prefix_i18n": false,
+        "name": "_price",
+        "type": "range",
+        "ignoreParams": {
+          "_price": [
+            0,
+            null
+          ]
+        }
+      }
+    ],
+    "checkboxes": [
+      {
+        "title": "Filter.list.category",
+        "type": "checkbox",
+        "needTranslation": true,
+        "translationNS": "Filter.category.",
+        "paramaterByWhatWillBeFilter": "custom_field_3"
+      },
+      {
+        "title": "Filter.list.deadline",
+        "type": "checkbox",
+        "needTranslation": false,
+        "translationNS": "Filter.category.",
+        "paramaterByWhatWillBeFilter": "fund"
+      }
+    ]
+  },
+  "pinsInfo": {
+    "commerce": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Комерційні <br> приміщення"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/commerce.jpg",
+      "filter_type": "arrow"
+    },
+    "tennis": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Football field",
+        "uk": "Футбольне поле"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/football.png",
+      "filter_type": "arrow"
+    },
+    "fountain": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "pin",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Фонтан"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/fountain.png",
+      "filter_type": "arrow"
+    },
+    "greenzone": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "pin",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Зелена зона"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/greenzone.jpg",
+      "filter_type": "arrow"
+    },
+    "greenzone_2": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "pin",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Зелена зона"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/greenzone.jpg",
+      "filter_type": "arrow"
+    },
+    "dogs": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Зона вигулу собак"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/dogsarea.jpg",
+      "filter_type": "arrow"
+    },
+    "quay": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Набережна"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/quay.jpg",
+      "filter_type": "arrow"
+    },
+    "kinder_queue_3": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Дитячий майданчик"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/kinder.jpg",
+      "filter_type": "arrow"
+    },
+    "kinder_queue_5": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Дитячий майданчик"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/kinder.jpg",
+      "filter_type": "arrow"
+    },
+    "kinder_queue_6": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Дитячий майданчик"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/kinder.jpg",
+      "filter_type": "arrow"
+    },
+    "kinder_queue_7": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "hideTooltip": true,
+      "title": {
+        "en": "Commerce",
+        "uk": "Дитячий майданчик"
+      },
+      "img": "/wp-content/themes/3d/assets/images-wp/kinder.jpg",
+      "filter_type": "arrow"
+    }
+  },
+  "hide_s3dFlybySideChooser": true,
+  "markers": [
+    "commercial.svg",
+    "marker.svg",
+    "marker2.svg",
+    "parking.svg",
+    "playground.svg",
+    "shop.svg",
+    "street.svg",
+    "underground.svg",
+    "walking.svg"
+  ],
+  "unit_statuses": {
+    "0": {
+      "label": "Продано",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-warning)"
+    },
+    "1": {
+      "label": "Свободно",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-success)"
+    },
+    "2": {
+      "label": "Резерв",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-warning)"
+    },
+    "3": {
+      "label": "Бронь",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-warning)"
+    },
+    "4": {
+      "label": "Недоступно",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-danger)"
+    },
+    "6": {
+      "label": "Заблокировано",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-danger)"
+    }
+  },
+  "form": {
+    "prefered_countries": [
+      "ua",
+      "us"
+    ]
+  },
+  "flyby_finish_dates": {
+    "1-outside": "[[6]]"
+  },
+  "assotiated_flat_builds_with_flybys": {
+    "1-outside": [
+      "6"
+    ],
+    "1-inside": [
+      "1"
+    ],
+    "2-outside": [
+      "8"
+    ],
+    "2-inside": [
+      "3"
+    ],
+    "3-inside": [
+      "7"
+    ]
+  },
+  "project_google_map_location": "https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d24513.279878576155!2d23.9967534!3d49.7799323!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473addb1aaa5b1eb%3A0xa0c14dc40ea69867!2sLagom%20Development!5e0!3m2!1suk!2sua!4v1750325729919!5m2!1suk!2sua",
+  "infoBoxes": {
+    "general_flyby_button_titles": {
+      "faq": "Можливі підписи для кнопок у інфобоксі обльоту : queue ,villa, house",
+      "1_outside": "queue",
+      "3_outside": "queue",
+      "1_inside": "queue"
+    }
+  },
+  "header": {
+    "logo": "/wp-content/themes/3d/assets/s3d/images/svg/logo.svg",
+    "menu_selector_default_FAQ": "data-open-menu // виставити це для дефолтного меню модуля, видалити",
+    "menu_selector": null
+  },
+  "currency_label": "$",
+  "currency_value": "USD",
+  "currency_list": false,
+  "show_prices": true,
+  "languages": "uk",
+  "show_phoneNumber": "+38 093 60 60 300",
+  "hideDocumentation": true,
+  "hideExterior": true,
+  "hideFinancialTerms": true,
+  "hideConstructionProgress": true,
+  "social_media_links_faq": "Якщо строчка пуста, то кнопка не буде відображатися",
+  "social_media_links": {
+    "telegram": "https://t.me/lagomdev_bot",
+    "viber": "",
+    "whatsapp": "",
+    "youtube": "https://www.youtube.com/@lagomdevelopment",
+    "twitter": "",
+    "tiktok": "",
+    "facebook": "https://www.facebook.com/lagom.development/",
+    "instagram": "https://www.instagram.com/lagom_development/"
+  },
+  "manager_info": {
+    "tel": "+380501234567",
+    "name": {
+      "en": "Alex Smith",
+      "uk": "Олексій"
+    },
+    "img": "/wp-content/themes/3d/assets/s3d/images/manager.png",
+    "position": {
+      "en": "Sales manager",
+      "uk": "Менеджер з продажів"
+    },
+    "socials": {
+      "telegram": "",
+      "viber": "",
+      "whatsapp": ""
+    }
+  },
+  "g_contacts": {
+    "email": false,
+    "construction_department": false,
+    "sales_department": {
+      "text": {
+        "en": "Sokilnyky village, Hrushevskoho St., Lviv, Lviv region, 81130",
+        "uk": "с. Сокільники, вул. Грушевського, Львів, Львівська область, 81130"
+      },
+      "google_maps_link": "https://maps.app.goo.gl/9dgEWarLYM7b5u7Q9"
+    }
+  },
+  "g_contact_advantaged_list": []
+}
