@@ -1,0 +1,1433 @@
+<div class="s3d-filter-wrap js-s3d-filter s3d-show" data-view-type="card" data-type="genplan">
+    <div class="s3d-filter__top-sticky">
+      <div style="display:flex; justify-content: space-between; align-items: center; width: 100%">
+        <div class="s3d-filter__title text-style-3-d-fonts-1920-h-2-regular">
+          <span>Фільтр</span>
+        </div>
+        
+    <div class="s3d-filter__close-wrap js-s3d-filter__close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99995 7.29297L8.35351 7.64652L12.5 11.793L16.6464 7.64652L17 7.29297L17.7071 8.00008L17.3535 8.35363L13.2071 12.5001L17.3535 16.6465L17.7071 17.0001L17 17.7072L16.6464 17.3536L12.5 13.2072L8.35351 17.3536L7.99995 17.7072L7.29285 17.0001L7.6464 16.6465L11.7928 12.5001L7.6464 8.35363L7.29285 8.00008L7.99995 7.29297Z" fill="#1A1E21"></path>
+      </svg>
+    </div>
+  
+      </div>
+        <div class="s3d-filter__top-results" style="display:flex;justify-content:space-between;align-items: center; width: 100%;  margin: var(--space-5) 0;">
+          <div class="text-gray-700 filter-subtitle">
+            Знайдено
+            <span class="js-s3d__amount-flat__num">16</span>
+            з
+            <span class="js-s3d__amount-flat__num-all">16</span>
+          </div>
+          
+          
+    <button type="button" class="Link " id="resetFilter">
+      
+    <svg class=""><use xlink:href="#icon-Trash"></use></svg>
+  
+      <span class="Link__text">Скинути фільтри</span>
+    </button>
+  
+        </div>
+    </div>
+
+    <div class="s3d-filter__top" style="height: 528px;">
+      
+
+      <div class="s3d-filter">
+        
+      <div class="s3d-filter__range-wrapper">
+        <!--<div class="s3d-filter__param s3d-filter__range">
+          <div class="s3d-filter__param-title">Поверх</div>
+          <div class="s3d-filter__range-list js-filter-range">
+            <input class="js-s3d-filter__floor--input" data-type="floor" data-min="1" data-max="15" data-from="1" data-to="15">
+          </div>
+        </div>
+        <div class="s3d-filter__param s3d-filter__range">
+          <div class="s3d-filter__param-title">Площа, м²</div>
+          <div class="s3d-filter__range-list js-filter-range">
+            <input class="js-s3d-filter__area--input" data-type="area" data-min="5" data-max="555" data-from="5" data-to="555">
+          </div>
+        </div>-->
+        
+    <div class="Range js-filter-range">
+      <div class="Range__title"> Площа , м²</div>
+      <input class="Range__input" data-type="area" data-border="min" type="text" data-raw-value="104">
+      <div class="Range__item ">
+        <span class="irs irs--flat js-irs-0"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="display: none;">0</span><span class="irs-max" style="display: none;">1</span><span class="irs-from" style="display: none; left: 0%;">0</span><span class="irs-to" style="display: none; left: 0%;">0</span><span class="irs-single" style="display: none; left: 0%;">0</span></span><span class="irs-grid"></span><span class="irs-bar" style="left: 2.84091%; width: 94.3182%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-handle from" style="left: 0%;"><i></i><i></i><i></i></span><span class="irs-handle to" style="left: 94.3182%;"><i></i><i></i><i></i></span></span><input class="js-s3d-filter__area--input irs-hidden-input" data-type="area" data-min="0" data-max="0" data-from="0" data-to="0" tabindex="-1" readonly="">
+      </div>
+      <input class="Range__input" data-type="area" data-border="max" type="text" data-raw-value="347">
+    </div>
+  
+    <div class="Range js-filter-range">
+      <div class="Range__title"> Площа ділянки , сот</div>
+      <input class="Range__input" data-type="area_land" data-border="min" type="text" data-raw-value="2.4">
+      <div class="Range__item ">
+        <span class="irs irs--flat js-irs-1"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="display: none;">0</span><span class="irs-max" style="display: none;">1</span><span class="irs-from" style="display: none; left: 0%;">0</span><span class="irs-to" style="display: none; left: 0%;">0</span><span class="irs-single" style="display: none; left: 0%;">0</span></span><span class="irs-grid"></span><span class="irs-bar" style="left: 2.84091%; width: 94.3182%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-handle from" style="left: 0%;"><i></i><i></i><i></i></span><span class="irs-handle to" style="left: 94.3182%;"><i></i><i></i><i></i></span></span><input class="js-s3d-filter__area_land--input irs-hidden-input" data-type="area_land" data-min="0" data-max="0" data-from="0" data-to="0" tabindex="-1" readonly="">
+      </div>
+      <input class="Range__input" data-type="area_land" data-border="max" type="text" data-raw-value="8.9">
+    </div>
+  
+    <div class="Range js-filter-range">
+      <div class="Range__title"> Ціна </div>
+      <input class="Range__input" data-type="_price" data-border="min" type="text" data-raw-value="188000">
+      <div class="Range__item ">
+        <span class="irs irs--flat js-irs-2"><span class="irs"><span class="irs-line" tabindex="0"></span><span class="irs-min" style="display: none;">0</span><span class="irs-max" style="display: none;">1</span><span class="irs-from" style="display: none; left: 0%;">0</span><span class="irs-to" style="display: none; left: 0%;">0</span><span class="irs-single" style="display: none; left: 0%;">0</span></span><span class="irs-grid"></span><span class="irs-bar" style="left: 2.84091%; width: 94.3182%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-handle from" style="left: 0%;"><i></i><i></i><i></i></span><span class="irs-handle to" style="left: 94.3182%;"><i></i><i></i><i></i></span></span><input class="js-s3d-filter___price--input irs-hidden-input" data-type="_price" data-min="0" data-max="0" data-from="0" data-to="0" tabindex="-1" readonly="">
+      </div>
+      <input class="Range__input" data-type="_price" data-border="max" type="text" data-raw-value="1041000">
+    </div>
+  
+      </div>
+  
+        <div class="s3d-filter__input-wrapper">
+          <div class="s3d-filter__param">
+            <div class="s3d-filter__param-title filter-subtitle">Пошук за номером</div>
+            
+    <input class="TextInput " type="text" value="" data-type="number" placeholder="Введіть номер Будинку">
+  
+            <!--<input data-type="number"  type="text" placeholder="Enter Unit Number">-->
+          </div>
+        </div>
+        
+          <div class="s3d-filter__checkboxes-wrapper" data-checkbox-group="custom_field_3">
+            <div class="s3d-filter__param">
+              <div class="s3d-filter__param-title filter-subtitle">Тип</div>
+              <div class="js-s3d-filter__checkboxes s3d-filter__checkbox__row" data-custom_field_3-container="">
+                <div class="s3d-filter-checkboxes s3d-filter__checkbox__row" style="width: 100%; flex-wrap: wrap; gap: 8px;">
+    <div class="Checkbox">
+      <input class="Checkbox__input" type="checkbox" data-type="custom_field_3" data-custom_field_3="Duplex" id="custom_field_3-Duplex">
+      <label class="Checkbox__label" for="custom_field_3-Duplex">Дуплекс</label>
+    </div>
+  
+    <div class="Checkbox">
+      <input class="Checkbox__input" type="checkbox" data-type="custom_field_3" data-custom_field_3="Villa" id="custom_field_3-Villa">
+      <label class="Checkbox__label" for="custom_field_3-Villa">Вілла</label>
+    </div>
+  </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="s3d-filter__checkboxes-wrapper" data-checkbox-group="fund">
+            <div class="s3d-filter__param">
+              <div class="s3d-filter__param-title filter-subtitle">Дата здачі</div>
+              <div class="js-s3d-filter__checkboxes s3d-filter__checkbox__row" data-fund-container="">
+                <div class="s3d-filter-checkboxes s3d-filter__checkbox__row">
+    <div class="Checkbox">
+      <input class="Checkbox__input" type="checkbox" data-type="fund" data-fund="3 кв. 2026" id="fund-3 кв. 2026">
+      <label class="Checkbox__label" for="fund-3 кв. 2026">3 кв. 2026</label>
+    </div>
+  
+    <div class="Checkbox">
+      <input class="Checkbox__input" type="checkbox" data-type="fund" data-fund="4 кв. 2027" id="fund-4 кв. 2027">
+      <label class="Checkbox__label" for="fund-4 кв. 2027">4 кв. 2027</label>
+    </div>
+  
+    <div class="Checkbox">
+      <input class="Checkbox__input" type="checkbox" data-type="fund" data-fund="Здано" id="fund-Здано">
+      <label class="Checkbox__label" for="fund-Здано">Здано</label>
+    </div>
+  </div>
+              </div>
+            </div>
+          </div>
+        
+        <div class="smarto_powered">
+          <span class="filter-subtitle">  Powered by </span>
+          <a href="https://smarto.agency/?utm_source=referral&amp;utm_medium=genplan.lagom-development.com" class="filter-subtitle text-gray-900" target="_blank">
+            Smart Orange
+          </a>
+        
+        </div>
+      </div>
+      
+    </div>
+    <div class="s3d-filter__view-type-wrapper">
+      <div class="s3d-filter__view-type">
+          <button data-switch-filter-view-type="card" class="active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4.5C4.72386 4.5 4.5 4.72386 4.5 5V10C4.5 10.2761 4.72386 10.5 5 10.5H10C10.2761 10.5 10.5 10.2761 10.5 10V5C10.5 4.72386 10.2761 4.5 10 4.5H5ZM5.5 9.5V5.5H9.5V9.5H5.5ZM5 13.5C4.72386 13.5 4.5 13.7239 4.5 14V19C4.5 19.2761 4.72386 19.5 5 19.5H10C10.2761 19.5 10.5 19.2761 10.5 19V14C10.5 13.7239 10.2761 13.5 10 13.5H5ZM5.5 18.5V14.5H9.5V18.5H5.5ZM13.5 5C13.5 4.72386 13.7239 4.5 14 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V10C19.5 10.2761 19.2761 10.5 19 10.5H14C13.7239 10.5 13.5 10.2761 13.5 10V5ZM14.5 5.5V9.5H18.5V5.5H14.5ZM14 13.5C13.7239 13.5 13.5 13.7239 13.5 14V19C13.5 19.2761 13.7239 19.5 14 19.5H19C19.2761 19.5 19.5 19.2761 19.5 19V14C19.5 13.7239 19.2761 13.5 19 13.5H14ZM14.5 18.5V14.5H18.5V18.5H14.5Z"></path>
+              </svg>
+          </button>
+          <button data-switch-filter-view-type="list">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25293 6.25391H5.75293H18.2483H18.7483V7.25391H18.2483H5.75293H5.25293V6.25391ZM5.25293 11.5018H5.75293H18.2483H18.7483V12.5018H18.2483H5.75293H5.25293V11.5018ZM5.75293 16.7498H5.25293V17.7498H5.75293H18.2483H18.7483V16.7498H18.2483H5.75293Z"></path>
+              </svg>
+          </button>
+        </div>
+        <div class="s3d-filter__hide" id="hideFilter" data-hide-text="Скрити фільтри" data-show-text="Показати фільтри">
+          <span>Показати фільтри</span>
+          
+    <svg class=""><use xlink:href="#icon-Chevron down"></use></svg>
+  
+        </div>
+        </div>
+    <div class="s3d-filter__table js-s3d-filter__table">
+      <div class="s3d-filter__head js-s3d-filter__head">
+          <div class="s3d-filter__tr">
+            <div class="s3d-filter__th--offset" data-sort="none"></div>
+            <div class="s3d-filter__th" data-sort="rooms">
+              Кімнат
+              <svg class="s3d-sort__arrow" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.89319 1.63579L9.43974 2.2174L12.4395 5.40965L12.9531 5.9562L11.86 6.9834L11.3464 6.43685L9.64319 4.62433L9.64319 13.5L9.64319 14.25L8.14319 14.25L8.14319 13.5L8.14319 4.62433L6.43995 6.43685L5.92635 6.9834L4.83325 5.9562L5.34685 5.40965L8.34665 2.2174L8.89319 1.63579Z" fill="#6C7A88"></path>
+              </svg>
+            </div>
+            <div class="s3d-filter__th" data-sort="area">
+              Площа м²
+              <svg class="s3d-sort__arrow" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.89319 1.63579L9.43974 2.2174L12.4395 5.40965L12.9531 5.9562L11.86 6.9834L11.3464 6.43685L9.64319 4.62433L9.64319 13.5L9.64319 14.25L8.14319 14.25L8.14319 13.5L8.14319 4.62433L6.43995 6.43685L5.92635 6.9834L4.83325 5.9562L5.34685 5.40965L8.34665 2.2174L8.89319 1.63579Z" fill="#6C7A88"></path>
+              </svg>
+            </div>
+            <div class="s3d-filter__th" data-sort="price_m2" style="display: ">
+              Ціна $ м²
+              <svg class="s3d-sort__arrow" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.89319 1.63579L9.43974 2.2174L12.4395 5.40965L12.9531 5.9562L11.86 6.9834L11.3464 6.43685L9.64319 4.62433L9.64319 13.5L9.64319 14.25L8.14319 14.25L8.14319 13.5L8.14319 4.62433L6.43995 6.43685L5.92635 6.9834L4.83325 5.9562L5.34685 5.40965L8.34665 2.2174L8.89319 1.63579Z" fill="#6C7A88"></path>
+              </svg>
+            </div>
+            <div class="s3d-filter__th" data-sort="_price" style="display: ">
+              Ціна $
+              <svg class="s3d-sort__arrow" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.89319 1.63579L9.43974 2.2174L12.4395 5.40965L12.9531 5.9562L11.86 6.9834L11.3464 6.43685L9.64319 4.62433L9.64319 13.5L9.64319 14.25L8.14319 14.25L8.14319 13.5L8.14319 4.62433L6.43995 6.43685L5.92635 6.9834L4.83325 5.9562L5.34685 5.40965L8.34665 2.2174L8.89319 1.63579Z" fill="#6C7A88"></path>
+              </svg>
+            </div>
+            <div class="s3d-filter__th" data-sort="none">
+              <!--Обрати-->
+            </div>
+            <div class="s3d-filter__th--offset" data-sort="none"></div>
+          </div>
+        </div>
+      <table>
+        <colgroup>
+          <col>
+          <col span="5"> <!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+          <col>
+        </colgroup>
+        <tbody class="s3d-filter__body js-s3d-filter__body" data-view-type="card">
+        
+    <div class=" s3d-card js-s3d-card" data-id="28" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              3 кв. 2026
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="28" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 154 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Дуплекс №137</div>
+        <!-- <div>154 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/6/B1.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>Б1</div>
+        <div class="decorative-slash">/</div>
+        <div>154 м²</div>
+        <div>154 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 137
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 3 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="35" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              3 кв. 2026
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="35" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 104 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Дуплекс №144</div>
+        <!-- <div>104 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/6/render-1767612522.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>В2</div>
+        <div class="decorative-slash">/</div>
+        <div>104 м²</div>
+        <div>104 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 144
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 2.4 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="53" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              Здано
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="53" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 137 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Дуплекс №162</div>
+        <!-- <div>137 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/6/162-1776779473.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А2</div>
+        <div class="decorative-slash">/</div>
+        <div>137 м²</div>
+        <div>137 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 162
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 2.9 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="80" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="80" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №2</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 2
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 8.1 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="81" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="81" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №3</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 3
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 8 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="82" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="82" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №4</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 4
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 7.8 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="83" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="83" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №5</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 5
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 8.2 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="84" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="84" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №6</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 6
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 8.4 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="88" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="88" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №10</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 10
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 7.8 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="89" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="89" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №11</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 11
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 8 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="90" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="90" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 301 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №12</div>
+        <!-- <div>301 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/1/A.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А</div>
+        <div class="decorative-slash">/</div>
+        <div>301 м²</div>
+        <div>301 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 12
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 8 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="105" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="105" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 139 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Дуплекс №199</div>
+        <!-- <div>139 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/8/199-1764920850.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А1</div>
+        <div class="decorative-slash">/</div>
+        <div>139 м²</div>
+        <div>139 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 199
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 3 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="106" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="106" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 154 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Дуплекс №200</div>
+        <!-- <div>154 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/8/200-1764920863.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>Б2</div>
+        <div class="decorative-slash">/</div>
+        <div>154 м²</div>
+        <div>154 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 200
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 3.9 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="109" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              4 кв. 2027
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="109" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 139 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Дуплекс №203</div>
+        <!-- <div>139 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/8/190203-1764920906.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>А1</div>
+        <div class="decorative-slash">/</div>
+        <div>139 м²</div>
+        <div>139 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 203
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 4.3 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="146" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              Здано
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="146" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 149 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Дуплекс №76</div>
+        <!-- <div>149 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/7/76_3_1-1780668559.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>Б2</div>
+        <div class="decorative-slash">/</div>
+        <div>149 м²</div>
+        <div>149 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 76
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 4.8 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      
+        
+    <div class=" s3d-card js-s3d-card" data-id="147" data-key="id" data-sale="1" onmouseenter="onCardFilterMouseEnter(this)" onmouseleave="onCardFilterMouseLeave(this)">
+      
+     <button class="s3d__close js-s3d-card__close">
+        <svg><use xlink:href="#icon-close"></use></svg>
+     </button>
+  
+      <div class="s3d-card__header">
+        <div class="left">
+          
+       <div class="s3d-card__status s3d-card__image-info" data-sale="1" data-tooltip="Наявність у системі перевірено">
+          Вільно
+          
+    <svg class="s3d-card__status-icon"><use xlink:href="#icon-Info"></use></svg>
+  
+        </div>
+    
+          
+            <div class="s3d-card__badge">
+              Здано
+              
+    <svg class="s3d-card__badge-icon"><use xlink:href="#icon-Construction"></use></svg>
+  
+            </div>
+            
+        </div>
+        <div class="right">
+          
+      <label data-tooltip-dont-show-when-have-classname="added-to-favourites" data-tooltip="Додати до порівняння" aria-label="button" aria-role="button" data-id="147" data-key="id" class="s3d__add-to-favourite js-s3d-add__favourite ">
+         <input type="checkbox" data-key="checked">
+         
+    <svg class=""><use xlink:href="#icon-Compare"></use></svg>
+  
+      </label>
+  
+        </div>
+
+        <!-- 
+      <div class="s3d-card__rooms-count s3d-card__image-info">
+        Площа: 189 м²
+      </div>
+     -->
+      </div>
+      <div class="s3d-card__middle">
+        <div>Вілла №54</div>
+        <!-- <div>189 м²</div> -->
+      </div>
+      <div class="s3d-card__image">
+        <img src="https://lagom.devbase.pro/img/projects/1/7/4A5A7965-1781104833.jpg" onerror="this.src='/wp-content/themes/3d/assets/s3d/images/examples/no-image.png'" data-key="src" loading="lazy">
+      </div>
+      <!-- <div class="s3d-card__middle">
+        <div>Г</div>
+        <div class="decorative-slash">/</div>
+        <div>189 м²</div>
+        <div>189 м²</div> 
+      </div>-->
+      <div class="s3d-card__info-wrapper">
+        <div class="s3d-card__info-label-wrapper">
+          <!--<div class="s3d-card__info-label">
+            Номер: 54
+          </div>-->
+          <div class="s3d-card__info-label">
+              Площа ділянки 5 сот
+            </div>
+        </div>
+        <!-- <div class="s3d-card__buttons">
+            
+    <button class="ButtonWithoutIcon js-s3d-card__link ButtonWithoutIcon--secondary"  type="button">
+      Детальніше
+    </button>
+  
+        </div> -->
+      </div>
+      
+   </div>
+      </tbody>
+      </table>
+    </div>
+    <div class="s3d-filter__grid js-s3d-filter__grid">
+    </div>
+    <!--
+     <div class="s3d-filter__amount-flat">Знайдено
+      <span class="s3d-filter__amount-flat__num js-s3d__amount-flat__num">25</span>
+      з
+      <span class="s3d-filter__amount-flat__num js-s3d__amount-flat__num-all">456</span>
+    </div>
+  -->
+  </div>

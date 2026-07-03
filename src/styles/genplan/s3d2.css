@@ -3963,7 +3963,7 @@ img.mfp-img {
 .iti__flag {
   height: 15px;
   box-shadow: 0 0 1px 0 #888;
-  background-image: url(../img/flags.png?1);
+  background-image: url(/genplan/ui-images/flags.png);
   background-repeat: no-repeat;
   background-color: #dbdbdb;
   background-position: 20px 0;
@@ -3971,7 +3971,7 @@ img.mfp-img {
 
 @media (min-resolution: 2x) {
   .iti__flag {
-    background-image: url(../img/flags@2x.png?1);
+    background-image: url(/genplan/ui-images/flags@2x.png);
   }
 }
 .iti__flag.iti__np {

@@ -1,0 +1,503 @@
+<div class="s3d-ctr js-s3d-ctr unselectable" data-type="genplan">
+      
+    <div class="s3d-ctr__nav s3d-display" id="js-s3d-ctr__elem" data-hide-elements="floor,flat">
+      <div class="s3d-ctr__nav__title">Меню 3D</div>
+      
+      <button class="js-ctr-btn s3d-nav__btn js-s3d-nav__btn s3d-unActive active" data-type="genplan" disabled="">Генплан</button>
+    
+      <!--
+      <button class="js-ctr-btn s3d-nav__btn js-s3d-nav__btn" data-type="flyby" data-flyby="1" data-side="outside" >6 Черга</button>
+    -->
+      
+       <div class="js-ctr-btn s3d-nav__btn s3d-ctr__option s3d-unActive">
+        <div class="s3d-ctr__option__title ">Будинки</div>
+        <div class="s3d-ctr__option__buttons">
+           
+    <button class="js-ctr-btn s3d-nav__btn js-s3d-nav__btn s3d-unActive" data-type="flyby" data-flyby="1" data-side="outside" disabled="">6 Черга</button>
+  
+    <button class="js-ctr-btn s3d-nav__btn js-s3d-nav__btn s3d-unActive" data-type="flyby" data-flyby="1" data-side="inside" disabled="">Lagom UNIQUE</button>
+  
+    <button class="js-ctr-btn s3d-nav__btn js-s3d-nav__btn s3d-unActive" data-type="flyby" data-flyby="2" data-side="outside" disabled="">7 Черга</button>
+  
+         </div>
+      </div>
+    
+      
+       <button class="js-ctr-btn s3d-nav__btn js-s3d-nav__btn s3d-unActive" type="button" data-type="plannings" disabled="">Планування</button>
+    
+      
+       <button class="s3d-nav__btn js-s3d-nav__btn" type="button" data-type="flat" disabled="">Котедж</button>
+    
+      
+      <div class="js-ctr-btn s3d-nav__btn s3d-ctr__option s3d-unActive">
+          <div class="s3d-ctr__option__title ">Плани поверхів</div>
+          <div class="s3d-ctr__option__buttons s3d-ctr__option__buttons--floors" data-floor-list-dropdown="" data-dont-make-me-active="">
+          <button class="s3d-nav__btn js-s3d-nav__btn" type="button" data-type="floor" data-build="6" data-floor="1" data-section="1">
+          floor_list.build floor_list.section
+          </button>
+        
+          <button class="s3d-nav__btn js-s3d-nav__btn" type="button" data-type="floor" data-build="1" data-floor="1" data-section="1">
+          floor_list.build floor_list.section
+          </button>
+        
+          <button class="s3d-nav__btn js-s3d-nav__btn" type="button" data-type="floor" data-build="7" data-floor="1" data-section="1">
+          floor_list.build floor_list.section
+          </button>
+        
+          <button class="s3d-nav__btn js-s3d-nav__btn" type="button" data-type="floor" data-build="8" data-floor="1" data-section="1">
+          floor_list.build floor_list.section
+          </button>
+        </div>
+        </div>
+    
+      
+       <button class="s3d-nav__btn js-s3d-nav__btn" type="button" data-type="floor" disabled="">План поверху</button>
+    
+    </div>
+      <div class="s3d-ctr__menu-3d js-s3d-ctr__menu-3d s3d-show">
+        
+    <div class="s3d-ctr__menu-3d-compass-nav" style="pointer-events: none; opacity: 0.5;">
+        <button class="js-ctr-btn s3d__button s3d__button-left js-s3d__button-left unselectable s3d-unActive" data-type="prev" disabled="">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.90658 12.5062L12.7036 17.3055L11.9963 18.0124L6.34625 12.3597L5.99294 12.0062L6.34625 11.6527L11.9963 6L12.7036 6.70694L7.90658 11.5062H18V12.5062H7.90658Z"></path>
+          </svg>
+        </button>
+        
+        <div class="s3d-ctr__menu-3d__compass-wrapper js-s3d-ctr__menu-3d__compass" id="compass">
+            <div class="s3d-ctr__menu-3d__compass">
+                <div class="s3d-ctr__menu-3d__compass__inner" data-controller-compass="" style="transform: translate3d(0px, 0px, 0px);">
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-text">W</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-text">N</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-text">E</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-text">S</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-text">W</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-text">N</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                    <div class="compass-text">E</div>
+                    <div class="compass-line-big">|</div>
+                    <div class="compass-line-small">|</div>
+                </div>
+            </div>
+        </div>
+    
+        <button class="js-ctr-btn s3d__button s3d__button-right js-s3d__button-right unselectable s3d-unActive" data-type="next" disabled="">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0864 12.5005L11.2932 17.2938L12.0003 18.0009L17.647 12.354L18.0005 12.0005L17.647 11.6469L12.0003 6L11.2932 6.70709L16.0864 11.5005H6V12.5005H16.0864Z"></path>
+          </svg>
+        </button>
+     </div>
+  
+        
+    <div class="s3d-ctr__menu-3d-buttons js-s3d-ctr__menu-3d-buttons s3d-display">
+        
+    <label for="js-s3d-ctr__menu-3d-buttons-mobile" class="s3d-ctr__menu-3d-buttons__mobile-opener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-when-opened="">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 7.29289C7.68342 6.90237 8.31658 6.90237 8.70711 7.29289L12 10.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L13.4142 12L16.7071 15.2929C17.0976 15.6834 17.0976 16.3166 16.7071 16.7071C16.3166 17.0976 15.6834 17.0976 15.2929 16.7071L12 13.4142L8.70711 16.7071C8.31658 17.0976 7.68342 17.0976 7.29289 16.7071C6.90237 16.3166 6.90237 15.6834 7.29289 15.2929L10.5858 12L7.29289 8.70711C6.90237 8.31658 6.90237 7.68342 7.29289 7.29289Z" fill="#EB5757"></path>
+      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-when-closed="">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 5C2.25 4.58579 2.58579 4.25 3 4.25H19C19.4142 4.25 19.75 4.58579 19.75 5C19.75 5.41421 19.4142 5.75 19 5.75H3C2.58579 5.75 2.25 5.41421 2.25 5ZM3 9.25C2.58579 9.25 2.25 9.58579 2.25 10C2.25 10.4142 2.58579 10.75 3 10.75H19C19.4142 10.75 19.75 10.4142 19.75 10C19.75 9.58579 19.4142 9.25 19 9.25H3ZM3 19.25C2.58579 19.25 2.25 19.5858 2.25 20C2.25 20.4142 2.58579 20.75 3 20.75H19C19.4142 20.75 19.75 20.4142 19.75 20C19.75 19.5858 19.4142 19.25 19 19.25H3ZM3 14.25C2.58579 14.25 2.25 14.5858 2.25 15C2.25 15.4142 2.58579 15.75 3 15.75H19C19.4142 15.75 19.75 15.4142 19.75 15C19.75 14.5858 19.4142 14.25 19 14.25H3Z" fill="#EB5757"></path>
+      </svg>
+      <input type="checkbox" id="js-s3d-ctr__menu-3d-buttons-mobile" name="efef">
+    </label>
+  
+        <div class="js-ctr-btn s3d-ctr__infra-button js-s3d-ctr__infra-button s3d-ctr__menu-3d-btn-style btn-style-hover s3d-unActive">
+          <span>Інфраструктура</span>
+          <label class="s3d-ctr__infra-button__select js-s3d__radio-view-change">
+            <input type="checkbox" checked="false">
+            <i class="s3d-ctr__infra-button__select-circle"></i>
+          </label>
+        </div>
+        
+        
+        <!--<div class="js-ctr-btn s3d-ctr__filter js-s3d-ctr__filter s3d-ctr__menu-3d-btn-style btn-style-hover">
+          <div class="s3d-ctr__filter__icon">
+            <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="2.5" x2="26" y2="2.5"></line>
+              <line y1="18.5" x2="26" y2="18.5"></line>
+              <line y1="10.5" x2="26" y2="10.5"></line>
+              <circle cx="20.5" cy="2.5" r="2"></circle>
+              <circle cx="20.5" cy="18.5" r="2"></circle>
+              <circle cx="5.5" cy="10.5" r="2"></circle>
+            </svg>
+          </div>
+          <span class="s3d-ctr__filter__text">Фільтр</span>
+        </div>-->
+        <!--<div class="js-ctr-btn s3d__choose--flat js-s3d__choose--flat s3d-ctr__menu-3d-btn-style">
+            <div class="s3d__choose--flat--button-bg js-s3d__choose--flat--button-svg">
+                <svg viewBox="0 0 145 44" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                  <path d="M0 22C0 9.84974 9.84973 0 22 0H123C135.15 0 145 9.84974 145 22C145 34.1503 135.15 44 123 44H22C9.84974 44 0 34.1503 0 22Z"/>
+                </svg>
+            </div>
+            <label class="s3d__choose--flat--button" data-choose-type="flat">
+              <input type="radio" name="chooseFlat" checked value='flat'/>
+              <span>Будинок</span>
+            </label>
+            <label class="s3d__choose--flat--button" data-choose-type="floor">
+                <input type="radio" name="chooseFlat" value='floor'/>
+                <span>Поверх</span>
+            </label>
+        </div>-->
+        
+        <!--<button class="js-ctr-btn s3d-ctr__helper js-s3d-ctr__helper s3d-ctr__menu-3d-btn-style btn-style-hover">
+          <div class="s3d-ctr__helper--text">Інструкція</div>
+        </button>-->
+      </div>
+  
+      </div>
+      
+    <a href="https://smarto.agency/?utm_source=referral&amp;utm_medium=genplan.lagom-development.com" class="smarto_logo" target="_blank">
+        <img src="/wp-content/themes/3d/assets/s3d/images/icon/smarto.svg">
+    </a>
+  
+      <div class="js-s3d-infoBox s3d-infoBox s3d-show" data-s3d-type="infoBox"></div>
+      
+    
+    <div class="MobileFlybyController">
+      
+    <button class="MenuMobileButton js-s3d-ctr__filter MenuMobileButton--primary s3d-display" data-hide-elements="flat,floor,favourites">
+      <span>Фільтр</span>
+      
+    </button>
+  
+      <!--
+    <button class="MenuMobileButton js-s3d-nav__btn MenuMobileButton--brand" data-type="plannings">
+      
+      
+    <svg  class="MenuMobileButton__icon"><use xlink:href="#icon-Card"></use></svg>
+  
+    </button>
+  -->
+      
+    <button class="MenuMobileButton  MenuMobileButton--primary" data-mobile-navigation-menu-open="">
+      <span>Генплан</span>
+      
+    <svg class="MenuMobileButton__icon"><use xlink:href="#icon-Chevron up"></use></svg>
+  
+    </button>
+  
+
+
+      
+      
+    <button class="MenuMobileButton  MenuMobileButton--primary" data-mobile-functions-menu-open="" data-hide-elements="flat,floor,plannings">
+      <span>Меню</span>
+      
+    <svg class="MenuMobileButton__icon"><use xlink:href="#icon-Chevron up"></use></svg>
+  
+    </button>
+  
+      
+
+       
+    <button class="MenuMobileButton js-ctr-btn js-s3d-ctr__helper MenuMobileButton--primary s3d-unActive s3d-display" disabled="">
+      <span>Інструкція</span>
+      
+    </button>
+  
+      <button class="ButtonIconLeft ButtonIconLeft--secondary ButtonIconLeft--centered" data-open-form="" data-show-elements-on-page="flat" style="display: none;">
+        <svg class="ButtonIconLeft__icon--no-paints" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="var(--color-gray-200)">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.88978 4.53638C6.88976 4.5364 6.88974 4.53642 6.88972 4.53644L5.0702 6.26193C5.0702 6.26193 5.07019 6.26194 5.07019 6.26194C4.63931 6.67057 4.45268 7.16852 4.51028 7.80011C4.57038 8.45913 4.90032 9.28114 5.56562 10.2726L5.56564 10.2727C6.64022 11.8743 8.25549 13.4085 8.96717 14.0835L8.96725 14.0835C9.5765 14.6615 11.3846 16.3734 13.2814 17.4795C14.4837 18.1804 15.4843 18.5 16.2706 18.5C16.9001 18.5 17.4162 18.296 17.8329 17.9008L19.4733 16.3452L19.8174 16.708L19.4733 16.3451C19.4939 16.3256 19.5 16.3067 19.5 16.2884C19.5 16.2689 19.4936 16.2508 19.4745 16.2327L19.4739 16.2321L16.1928 13.1207L16.5209 12.7747L16.1928 13.1207C16.1712 13.1002 16.1385 13.0847 16.0945 13.0847C16.0509 13.0847 16.0181 13.1 15.9959 13.1209C15.9958 13.1209 15.9958 13.121 15.9957 13.121L14.0498 14.9664L13.7586 15.2426L13.426 15.0181C12.4184 14.338 11.4421 13.5514 10.5239 12.6806L10.5239 12.6806C9.72806 11.9259 8.99577 11.1262 8.34712 10.303L8.06476 9.94469L8.39579 9.63076L10.3675 7.76095L10.3675 7.76094C10.3886 7.74097 10.3945 7.72085 10.3945 7.70432C10.3945 7.68778 10.3886 7.66749 10.3673 7.64734C10.3673 7.64733 10.3673 7.64733 10.3673 7.64732L7.08659 4.53627L7.08658 4.53626C7.06415 4.51498 7.02993 4.5 6.98835 4.5C6.9468 4.5 6.91243 4.51496 6.88978 4.53638ZM7.77469 3.81065C7.33781 3.39635 6.63887 3.39661 6.202 3.81047L6.20181 3.81065L4.38208 5.53633L4.38208 5.53633C3.71918 6.16499 3.43027 6.96823 3.51441 7.89093C3.59606 8.78622 4.02517 9.77162 4.73524 10.8298C5.87622 12.5304 7.56334 14.1303 8.27078 14.8012L8.27899 14.809L8.27907 14.8091L8.28183 14.8117C8.88857 15.3873 10.7708 17.1731 12.7776 18.3433L12.7777 18.3434C14.0532 19.0869 15.2336 19.5 16.2706 19.5C17.1404 19.5 17.9074 19.2083 18.521 18.6264L20.1614 17.0708C20.3763 16.867 20.5 16.5878 20.5 16.2884C20.5 15.9899 20.3775 15.7104 20.1616 15.5062C20.1615 15.5061 20.1614 15.506 20.1614 15.506L16.8809 12.3951C16.667 12.1922 16.3854 12.0847 16.0945 12.0847C15.8034 12.0847 15.5222 12.1924 15.3084 12.3947L15.308 12.395L13.6558 13.9619C12.8117 13.3675 11.9909 12.6937 11.212 11.955C10.565 11.3414 9.96336 10.6983 9.41876 10.0388L11.0556 8.48656C11.5075 8.058 11.5073 7.35064 11.0558 6.92207L11.0556 6.92188L7.7747 3.81065C7.77469 3.81065 7.77469 3.81065 7.77469 3.81065Z" stroke="none" fill="var(--color-gray-200)"></path>
+        </svg>
+        <span>Зворотній дзвінок</span>
+      </button>
+    </div>
+    
+    <div class="MobileFunctionsMenu" data-mobile-functions-menu="">
+      <div class="MobileFunctionsMenu__close" data-mobile-functions-menu-close="">
+        
+    <svg class="MobileFunctionsMenu__close-icon"><use xlink:href="#icon-close"></use></svg>
+  
+      </div>
+      <div class="text-style-3-d-fonts-1920-h-2-regular MobileFunctionsMenu__title">
+        Меню
+      </div>
+      
+
+      <div class="MobileFunctionsMenu__row">
+        
+        <div class="MobileFunctionsMenu__group" data-show-elements-on-page="genplan">
+          
+    <button class="IconButton active" data-mobile-theme-switcher="light">
+      
+    <svg class="IconButton__icon"><use xlink:href="#icon-Sun"></use></svg>
+  
+    </button>
+  
+          
+    <button class="IconButton " data-mobile-theme-switcher="dark">
+      
+    <svg class="IconButton__icon"><use xlink:href="#icon-Moon"></use></svg>
+  
+    </button>
+  
+        </div>
+        
+        
+      </div>
+      
+      
+    <button class="ButtonWithoutIcon js-s3d-flat__3d-tour" data-href="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d24513.279878576155!2d23.9967534!3d49.7799323!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473addb1aaa5b1eb%3A0xa0c14dc40ea69867!2sLagom%20Development!5e0!3m2!1suk!2sua!4v1750325729919!5m2!1suk!2sua" data-title="Розташування на карті" type="button">
+      Розташування на карті
+    </button>
+  
+
+      <a class="ButtonWithoutIcon" data-title="На сайт" target="_blank" href="https://lagom-development.com/">
+        На сайт
+      </a>
+      
+    <button class="ButtonWithoutIcon " type="button">
+      Хід будівництва
+    </button>
+  
+      
+    <button class="ButtonWithoutIcon  ButtonWithoutIcon--secondary" data-open-form="" type="button">
+      Звʼязок з менеджером
+    </button>
+  
+    </div>
+  
+    
+    
+    <div class="MobileNavigationMenu" data-mobile-navigation-menu="">
+      <div class="MobileNavigationMenu__close" data-mobile-navigation-menu-close="">
+        
+    <svg class="MobileNavigationMenu__close-icon"><use xlink:href="#icon-close"></use></svg>
+  
+      </div>
+      <div class="text-style-3-d-fonts-1920-h-2-regular MobileNavigationMenu__title">
+        Навігація
+      </div>
+      
+    <button class="ButtonWithoutIcon js-s3d-nav__btn active" data-type="genplan" type="button">
+      Генплан
+    </button>
+  
+      
+      
+    <div class="accordion-wrapper ">
+      <button class="accordion">Будинки</button>
+      <div class="panel">
+        
+          
+    <button class="ButtonWithoutIcon js-s3d-nav__btn" data-type="flyby" data-side="outside" data-flyby="1" type="button">
+      КМ LAGOM
+    </button>
+  
+    <button class="ButtonWithoutIcon js-s3d-nav__btn" data-type="flyby" data-side="inside" data-flyby="1" type="button">
+      Lagom UNIQUE
+    </button>
+  
+    <button class="ButtonWithoutIcon js-s3d-nav__btn" data-type="flyby" data-side="outside" data-flyby="2" type="button">
+      7 Черга
+    </button>
+  
+        
+        <div class="accordion__padding-block"></div>
+      </div>
+    </div>
+  
+      
+    <button class="ButtonWithoutIcon js-s3d-nav__btn" data-type="plannings" type="button">
+      Планування
+    </button>
+  
+      
+    <button class="ButtonWithoutIcon js-s3d-nav__btn" data-type="floor" type="button">
+      План поверху
+    </button>
+  
+      
+    <button class="ButtonWithoutIcon js-s3d-nav__btn" data-type="flat" type="button">
+      Котедж
+    </button>
+  
+    </div>
+  
+    
+  
+    <div class="FlybyControllerWrapper" data-hide-elements="floor,flat,plannings,favourites">
+      
+    <div class="s3d__compass js-s3d__compass">
+      <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(199.664deg);">
+        <g clip-path="url(#clip0_5183_78414)">
+          <path d="M81.8031 72.2844H34.4406" stroke="#FAFBFE"></path>
+          <path d="M58.1218 95.9657V48.6031" stroke="#FAFBFE"></path>
+          <path d="M69.7552 83.6253C63.4918 89.8887 53.3368 89.8887 47.0734 83.6253C40.81 77.3619 40.81 67.2069 47.0734 60.9435C53.3368 54.6801 63.4918 54.6801 69.7552 60.9435C76.0186 67.2069 76.0186 77.3619 69.7552 83.6253Z" stroke="#AEBECC"></path>
+          <path d="M58.1218 71.992L58.1218 39.8323" stroke="#FAFBFE" stroke-width="5"></path>
+        </g>
+        <path d="M53.8998 29.473V19.2875H55.3148L59.5121 25.9183C59.6306 26.1097 59.7946 26.3809 60.0043 26.7318C60.2139 27.0827 60.4213 27.4382 60.6263 27.7982C60.6127 27.4427 60.6013 27.0736 60.5922 26.6908C60.5876 26.308 60.5853 26.0323 60.5853 25.8636V19.2875H61.8158V29.473H60.3871L56.6547 23.5804C56.5134 23.3617 56.3038 23.0267 56.0258 22.5756C55.7523 22.1198 55.4333 21.5866 55.0687 20.976C55.0915 21.6094 55.1075 22.1449 55.1166 22.5824C55.1257 23.0153 55.1302 23.3435 55.1302 23.5668V29.473H53.8998Z" fill="#FAFBFE"></path>
+        <defs>
+          <clipPath id="clip0_5183_78414">
+          <rect width="43" height="43" fill="white" transform="translate(27.3015 66.8995) rotate(-45)"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  
+      <button type="button" class="ButtonIconLeft ButtonIconLeft--filter js-ctr-btn js-s3d-ctr__filter FlybyControllerWrapper-filter-call-button s3d-unActive" disabled="">
+        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_875_775)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 3C11.5 1.89543 12.3954 1 13.5 1C14.6046 1 15.5 1.89543 15.5 3C15.5 4.10457 14.6046 5 13.5 5C12.3954 5 11.5 4.10457 11.5 3ZM10.5415 3.5H0V2.5H10.5415C10.7795 1.08114 12.0135 0 13.5 0C14.9865 0 16.2205 1.08114 16.4585 2.5H39.5V3.5H16.4585C16.2205 4.91886 14.9865 6 13.5 6C12.0135 6 10.7795 4.91886 10.5415 3.5Z" fill="#1A1E21"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 9C3.5 7.89543 4.3954 7 5.5 7C6.6046 7 7.5 7.89543 7.5 9C7.5 10.1046 6.6046 11 5.5 11C4.3954 11 3.5 10.1046 3.5 9ZM2.5415 9.5H-8V8.5H2.5415C2.7795 7.08114 4.0135 6 5.5 6C6.9865 6 8.2205 7.08114 8.4585 8.5H20V9.5H8.4585C8.2205 10.9189 6.9865 12 5.5 12C4.0135 12 2.7795 10.9189 2.5415 9.5Z" fill="#1A1E21"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 15C11.5 13.8954 12.3954 13 13.5 13C14.6046 13 15.5 13.8954 15.5 15C15.5 16.1046 14.6046 17 13.5 17C12.3954 17 11.5 16.1046 11.5 15ZM10.5415 15.5H0V14.5H10.5415C10.7795 13.0811 12.0135 12 13.5 12C14.9865 12 16.2205 13.0811 16.4585 14.5H39.5V15.5H16.4585C16.2205 16.9189 14.9865 18 13.5 18C12.0135 18 10.7795 16.9189 10.5415 15.5Z" fill="#1A1E21"></path>
+          </g>
+          <defs>
+          <clipPath id="clip0_875_775">
+            <rect width="20" height="18" fill="white"></rect>
+          </clipPath>
+          </defs>
+        </svg>
+        <span>Фільтр</span>
+      </button>
+      <div class="FlybyController">
+        <div class="FlybyController__row">
+          
+  <div class="js-ctr-btn s3d-ctr__theme js-s3d-ctr__theme s3d-ctr__menu-3d-btn-style s3d-unActive s3d-display">
+    <input type="checkbox" class="s3d-ctr__switch" id="switch">
+    <label for="switch">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.5C12 2.22386 12.2239 2 12.5 2C12.7761 2 13 2.22386 13 2.5V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V2.5ZM12 22.5C12 22.7761 12.2239 23 12.5 23C12.7761 23 13 22.7761 13 22.5V19.5C13 19.2239 12.7761 19 12.5 19C12.2239 19 12 19.2239 12 19.5V22.5ZM18.433 3.25C18.1939 3.11193 17.8881 3.19387 17.75 3.43301L16.25 6.03109C16.1119 6.27024 16.1939 6.57603 16.433 6.7141C16.6722 6.85217 16.978 6.77024 17.116 6.53109L18.616 3.93301C18.7541 3.69387 18.6722 3.38807 18.433 3.25ZM7.11597 3.43301C6.9779 3.19387 6.6721 3.11193 6.43295 3.25C6.19381 3.38807 6.11187 3.69387 6.24994 3.93301L7.74994 6.53109C7.88801 6.77024 8.19381 6.85217 8.43295 6.7141C8.6721 6.57603 8.75404 6.27024 8.61597 6.03109L7.11597 3.43301ZM19.433 21.7141C19.1939 21.8522 18.8881 21.7702 18.75 21.5311L17.25 18.933C17.1119 18.6939 17.1939 18.3881 17.433 18.25C17.6722 18.1119 17.978 18.1939 18.116 18.433L19.616 21.0311C19.7541 21.2702 19.6722 21.576 19.433 21.7141ZM7.11597 21.5311C6.9779 21.7702 6.6721 21.8522 6.43295 21.7141C6.19381 21.576 6.11187 21.2702 6.24994 21.0311L7.74994 18.433C7.88801 18.1939 8.19381 18.1119 8.43295 18.25C8.6721 18.3881 8.75404 18.6939 8.61597 18.933L7.11597 21.5311ZM22.7141 7.43301C22.576 7.19387 22.2702 7.11193 22.0311 7.25L19.433 8.75C19.1939 8.88807 19.1119 9.19387 19.25 9.43301C19.3881 9.67216 19.6939 9.7541 19.933 9.61603L22.5311 8.11603C22.7702 7.97795 22.8522 7.67216 22.7141 7.43301ZM2.93301 7.25C2.69387 7.11193 2.38807 7.19387 2.25 7.43301C2.11193 7.67216 2.19387 7.97795 2.43301 8.11603L5.03109 9.61603C5.27024 9.7541 5.57603 9.67216 5.7141 9.43301C5.85217 9.19387 5.77024 8.88807 5.53109 8.75L2.93301 7.25ZM22.7141 17.433C22.576 17.6722 22.2702 17.7541 22.0311 17.616L19.433 16.116C19.1939 15.978 19.1119 15.6722 19.25 15.433C19.3881 15.1939 19.6939 15.1119 19.933 15.25L22.5311 16.75C22.7702 16.8881 22.8522 17.1939 22.7141 17.433ZM2.93301 17.616C2.69387 17.7541 2.38807 17.6722 2.25 17.433C2.11193 17.1939 2.19387 16.8881 2.43301 16.75L5.03109 15.25C5.27024 15.1119 5.57603 15.1939 5.7141 15.433C5.85217 15.6722 5.77024 15.978 5.53109 16.116L2.93301 17.616ZM24 12.5C24 12.2239 23.7761 12 23.5 12H20.5C20.2239 12 20 12.2239 20 12.5C20 12.7761 20.2239 13 20.5 13H23.5C23.7761 13 24 12.7761 24 12.5ZM1.5 12C1.22386 12 1 12.2239 1 12.5C1 12.7761 1.22386 13 1.5 13H4.5C4.77614 13 5 12.7761 5 12.5C5 12.2239 4.77614 12 4.5 12H1.5ZM12.5 8C10.0147 8 8 10.0147 8 12.5C8 14.9853 10.0147 17 12.5 17C14.9853 17 17 14.9853 17 12.5C17 10.0147 14.9853 8 12.5 8Z"></path>
+      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.86899 4.94469C9.61332 4.5038 10.3783 4.18891 11.1846 4C8.95165 6.58227 8.51744 10.4032 10.3369 13.5101C12.177 16.5961 15.7123 18.0027 19 17.226C18.4624 17.8558 17.8215 18.4017 17.0978 18.8426C13.3142 21.1519 8.41416 19.8923 6.13986 16.0714C3.86555 12.2295 5.10607 7.25407 8.86902 4.94475L8.86899 4.94469Z"></path>
+      </svg>
+    </label>
+  </div>
+  
+          
+        </div>
+      
+       
+        
+    <button class="ButtonWithoutIcon js-s3d-nav__btn" data-type="plannings" type="button">
+      Планування
+    </button>
+  
+        
+        
+    <div class="js-ctr-btn s3d__choose--flat js-s3d__choose--flat s3d-ctr__menu-3d-btn-style s3d-unActive" hidden="" style="opacity: 1;">
+      <div class="s3d__choose--flat--button-bg js-s3d__choose--flat--button-svg" style="left: 0px; width: 0px;">
+          <svg viewBox="0 0 145 44" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0 22C0 9.84974 9.84973 0 22 0H123C135.15 0 145 9.84974 145 22C145 34.1503 135.15 44 123 44H22C9.84974 44 0 34.1503 0 22Z"></path>
+          </svg>
+      </div>
+      <label class="s3d__choose--flat--button current active" data-choose-type="flat">
+        <input type="radio" name="chooseFlat" checked="" value="flat">
+        <span>Будинок</span>
+      </label>
+      <label class="s3d__choose--flat--button" data-choose-type="floor">
+          <input type="radio" name="chooseFlat" value="floor">
+          <span>Поверх</span>
+      </label>
+    </div>
+  
+        
+      <label for="data-hightlight-svg-elements" class="s3d-ctr__menu-3d-btn-style " data-hide-elements="">
+        <span class="s3d-ctr__filter__text">Підсвітити інфраструктуру</span>
+        <div class="checkbox-wrapper-6">
+          <input name="" data-hightlight-svg-elements="" class="tgl tgl-light" id="data-hightlight-svg-elements" type="checkbox">
+          <label class="tgl-btn" for="data-hightlight-svg-elements"></label>
+        </div>
+      </label>
+    
+        
+    <button class="ButtonWithoutIcon js-s3d-flat__3d-tour" data-href="https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d24513.279878576155!2d23.9967534!3d49.7799323!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473addb1aaa5b1eb%3A0xa0c14dc40ea69867!2sLagom%20Development!5e0!3m2!1suk!2sua!4v1750325729919!5m2!1suk!2sua" data-title="Розташування на карті" type="button">
+      Розташування на карті
+    </button>
+  
+        
+    <button class="ButtonWithoutIcon js-ctr-btn js-s3d-ctr__helper s3d-unActive" type="button" disabled="">
+      Інструкція
+    </button>
+  
+        
+    <button class="ButtonWithoutIcon  ButtonWithoutIcon--secondary" data-open-form="" type="button">
+      Звʼязок з менеджером
+    </button>
+  
+      </div>
+      
+    <div data-flyby-load-element="" class="SpinNav inLoad" data-hide-elements="floor,flat,plannings,favourites">
+      <div class="SpinNav__load-element" data-flyby-visual-load-element="" style="transform: scaleX(0.566667);"></div>
+      <button class="SpinNav__arrow js-s3d__button-left" data-type="prev" type="button">
+        
+    <svg class=""><use xlink:href="#icon-Big arrow left"></use></svg>
+  
+      </button>
+      <span class="SpinNav__counter fs-preloader-amount">57%</span>
+      <button class="SpinNav__arrow js-s3d__button-right" data-type="next" type="button">
+        
+    <svg class=""><use xlink:href="#icon-Big arrow right"></use></svg>
+  
+      </button>
+    </div>
+  
+    </div>
+  
+    </div>
