@@ -47,27 +47,21 @@ const VARIANTS_432 = ["768x432", "300x169", "1024x576", "1536x864", "1350x759", 
 const PROJECTS: ProjectData[] = [
   {
     num: "01",
-    title: "Котеджне містечко LAGOM",
-    tagline: "Простір, де панує гармонія",
+    title: "LAGOM Villa Kent",
+    tagline: "Uyumun hüküm sürdüğü alan",
     from: (
       <>
-        від <sup>1370</sup> $/м
-        <strong>
-          <sup>2</sup>
-        </strong>
+        <sup>1370</sup> $/m²&apos;den başlayan fiyatlarla
       </>
     ),
     area: (
       <>
-        Площа будинку від<strong> 132 </strong>м
-        <strong>
-          <sup>2</sup>
-        </strong>
+        <strong>132 </strong>m²&apos;den başlayan ev alanları
       </>
     ),
     description: (
       <>
-        Розтермінування до<strong> 2 років</strong>
+        <strong>2 yıla</strong> varan taksit imkanı
       </>
     ),
     href: "/lagom",
@@ -88,29 +82,23 @@ const PROJECTS: ProjectData[] = [
     num: "02",
     title: (
       <>
-        Резиденції <br /> UNIQUE
+        UNIQUE <br /> Rezidansları
       </>
     ),
-    tagline: "Простір, де говорить тиша",
+    tagline: "Sessizliğin konuştuğu alan",
     from: (
       <>
-        від <sup>2400</sup> $/м
-        <strong>
-          <sup>2</sup>
-        </strong>
+        <sup>2400</sup> $/m²&apos;den başlayan fiyatlarla
       </>
     ),
     area: (
       <>
-        Площа будинку від <strong>301 </strong>м
-        <strong>
-          <sup>2</sup>
-        </strong>
+        <strong>301 </strong>m²&apos;den başlayan ev alanları
       </>
     ),
     description: (
       <>
-        Розтермінування до <strong>2 років</strong>
+        <strong>2 yıla</strong> varan taksit imkanı
       </>
     ),
     href: "/unique",
@@ -206,12 +194,12 @@ function ProjectCard({ project }: { project: ProjectData }) {
 
             <div className="location flex-h">
               <div className="icon icon-location"></div>
-              <p className="inter-16-semi">м. Львів, бічна вул. Стрийська (с. Сокільники)</p>
+              <p className="inter-16-semi">Lviv, Stryiska Caddesi Yanı (Sokilnyky Köyü)</p>
             </div>
 
             <div className="navs">
-              <Btn label="Детальніше" href={project.href} className="info" />
-              <Btn label="На карті" variant="border" className="map" href="/contacts" />
+              <Btn label="Detaylar" href={project.href} className="info" />
+              <Btn label="Haritada" variant="border" className="map" href="/contacts" />
             </div>
           </div>
         </div>
@@ -257,9 +245,9 @@ function ProjectCard({ project }: { project: ProjectData }) {
             <div slot="container-end" className="swiper-baner flex-v">
               <span className="count mulish-50-extra">8</span>
               <p>
-                будинків
+                ev
                 <br />
-                доступно
+                mevcut
               </p>
             </div>
           </Swiper>
@@ -276,7 +264,7 @@ export function HomeProjects() {
         <div className="container-index">003</div>
 
         <div className="container-text">
-          <RevealText as="h2" className="mulish-64" text="Наші проєкти" />
+          <RevealText as="h2" className="mulish-64" text="Projelerimiz" />
         </div>
 
         <div className="container-grid flex-v">

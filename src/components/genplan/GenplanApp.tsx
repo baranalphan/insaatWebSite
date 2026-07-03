@@ -67,6 +67,7 @@ export function GenplanApp() {
 
   /* switching frame sets restarts the preload — show the loader again */
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setReady(false);
   }, [frameSet]);
 
@@ -113,7 +114,7 @@ export function GenplanApp() {
       btn.classList.toggle("active", isActive);
     });
     root.querySelectorAll(".s3d__title.js-s3d-ctr__option__text").forEach((el) => {
-      el.textContent = view === "flyby" ? "6 Черга" : view === "flat" ? "Котедж" : "Генплан";
+      el.textContent = view === "flyby" ? "6. Etap" : view === "flat" ? "Villa" : "Genel Plan";
     });
   }, [view]);
 
@@ -331,7 +332,7 @@ export function GenplanApp() {
 
       {mapOpen && (
         <div className="s3d-map-popup" onClick={() => setMapOpen(false)}>
-          <iframe src={MAP_EMBED_URL} title="Розташування на карті" allowFullScreen loading="lazy" />
+          <iframe src={MAP_EMBED_URL} title="Haritada Konum" allowFullScreen loading="lazy" />
         </div>
       )}
 

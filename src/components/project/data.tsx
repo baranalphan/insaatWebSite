@@ -146,119 +146,119 @@ export const lagomData: ProjectPageData = {
   introLogo: LAGOM_LOGO,
   introTitle: (
     <>
-      <strong>Містечко біля озера</strong>
-      <br />з ідеальним балансом природи
+      <strong>Göl Kenarında Villa Kent</strong>
+      <br />Doğa ile Şehir Konforunun
       <br />
-      та комфорту міста
+      Kusursuz Dengesi
     </>
   ),
   heroDesktopSrcSet: kvSrcSet("2026_02_lagom-kv-desktop"),
-  heroAlt: "Містечко біля озера з ідеальним балансом природи та комфорту міста",
+  heroAlt: "Doğa ile şehir konforunun kusursuz dengesine sahip göl kenarında villa kent",
   previewMobileSrcSet: previewSrcSet("2026_02_lagom-kv-mobile"),
-  previewTitle: "Простір для тих, хто цінує спокій, комфорт та естетику",
+  previewTitle: "Huzura, konfora ve estetiğe değer verenler için bir yaşam alanı",
   descriptionTitle: (
     <>
       <strong>
-        Будівництво 7-ї черги:
+        7. Etap İnşaatı:
         <br />
       </strong>
-      370 будинків, з яких 140 вже здано.
+      {"370 villadan 140'ı teslim edildi."}
     </>
   ),
   stats: [
     {
-      prefix: "від ",
+      prefix: "min ",
       value: "132",
       suffix: (
         <>
-          м
+          m
           <strong>
             <sup>2</sup>
           </strong>
         </>
       ),
-      top: { prefix: "до ", value: "220" },
-      name: "Площа будинків",
+      top: { prefix: "max ", value: "220" },
+      name: "Villa Alanı",
     },
-    { prefix: "до ", value: "6", suffix: " сот", name: "Площа ділянок" },
+    { prefix: "max ", value: "6", suffix: " ar", name: "Arsa Alanı" },
     {
-      prefix: "до ",
+      prefix: "max ",
       value: "54",
       suffix: (
         <>
-          м
+          m
           <strong>
             <sup>2</sup>
           </strong>
         </>
       ),
-      name: "У подарунок",
+      name: "Hediye",
     },
-    { prefix: "від ", value: "1370", suffix: " $", name: "За квадратний метр" },
+    { prefix: "", value: "1370", suffix: " $ / m²'den başlayan", name: "Metrekare Fiyatı" },
   ],
   videoSrc: "/videos/lagom-hd.mp4",
   videoSrcMob: "/videos/1j-shorts.v1.2.mp4",
-  overviewTitle: "Чому варто обрати LAGOM?",
+  overviewTitle: "Neden LAGOM'u Seçmelisiniz?",
   gallery: [
     {
-      title: "Локація",
-      description: "Котеджне містечко біля озера з 3-ма гектарами зелених зон неподалік від Львова.",
+      title: "Konum",
+      description: "Lviv yakınlarında, göl kenarında ve 3 hektarlık yeşil alana sahip villa kent.",
       media: { kind: "image", img: galleryImg("2025_12_lokacziya_nich_lagom") },
     },
     {
-      title: "Безпека",
+      title: "Güvenlik",
       description:
-        "Цілодобова охорона та сучасне відеоспостереження, контроль доступу Face ID, охоронна система Ajax, розпізнавання авто за номерним знаком й шлагбауми для вашої безпеки",
+        "Güvenliğiniz için 7/24 koruma ve modern video gözetim, Face ID erişim kontrolü, Ajax alarm sistemi, plaka tanıma ve otomatik bariyerler.",
       media: { kind: "image", img: galleryImg("2025_12_lokacziya_den_lagom") },
     },
     {
-      title: "Дозвілля",
+      title: "Sosyal Aktiviteler",
       description:
-        "Територія понад 16 гектарів, власна набережна, 5 км велодоріжок, дитячі майданчики, спортзал, тенісний корт, баскетбол, велодоріжки та workout-зони - все для активного відпочинку.",
+        "16 hektardan fazla alan, özel sahil şeridi, 5 km bisiklet yolu, çocuk oyun parkları, spor salonu, tenis kortu, basketbol sahası ve workout alanları.",
       media: GALLERY_VIDEO,
     },
   ],
   mediaTitle: (
     <>
-      <strong>Простір, що надихає:</strong>
+      <strong>İlham Veren Yaşam Alanı:</strong>
       <br />
-      естетика та практичність у скандинавському стилі
+      İskandinav Tarzında Estetik ve Pratiklik
     </>
   ),
   mediaTabs: [
-    { id: "tab_0", label: "Фото", images: LAGOM_MEDIA_PHOTOS },
-    { id: "tab_1", label: "Відео", videos: LAGOM_MEDIA_VIDEOS },
-    { id: "tab_2", label: "Проєкти", images: LAGOM_MEDIA_PROJECTS },
+    { id: "tab_0", label: "Fotoğraflar", images: LAGOM_MEDIA_PHOTOS },
+    { id: "tab_1", label: "Videolar", videos: LAGOM_MEDIA_VIDEOS },
+    { id: "tab_2", label: "Projeler", images: LAGOM_MEDIA_PROJECTS },
   ],
   characteristics: [
     {
       index: "01",
-      title: "Інженерні мережі",
+      title: "Altyapı Şebekeleri",
       img: { width: 600, height: 400, src: "/images/2025_12_pexels-pixabay-257736-600x400.webp", sizes: CHAR_SIZES },
       content: (
         <>
-          Усі центральні:
-          <p>• Водопостачання та каналізація;</p>
-          <p>• Електроенергія 15 кВт;</p>
-          <p>• Газопостачання;</p>
+          Tüm merkezi altyapı bağlantıları:
+          <p>• Su temini ve kanalizasyon;</p>
+          <p>• 15 kW elektrik gücü;</p>
+          <p>• Doğal gaz bağlantısı;</p>
         </>
       ),
     },
     {
       index: "02",
-      title: "Технологія будівництва",
+      title: "İnşaat Teknolojisi",
       img: { width: 600, height: 400, src: "/images/2025_12_at__0805-600x400.webp", sizes: CHAR_SIZES },
       content: (
         <>
-          <p>• Утеплений та гідроізольований монолітний залізобетонний фундамент.</p>
-          <p>• Цегляні стіни. Передбачена додаткова шумоізоляція між будинками.</p>
-          <p>• Фальцева покрівля даху від німецького виробника Arcelor Mittal.</p>
+          <p>• Isı ve su yalıtımlı monolitik betonarme temel.</p>
+          <p>• Tuğla duvarlar. Binalar arasında ilave ses yalıtımı.</p>
+          <p>• Alman üretici Arcelor Mittal marka kenetli çatı kaplaması.</p>
         </>
       ),
     },
     {
       index: "03",
-      title: "Екстер’єр та територія",
+      title: "Dış Cephe & Çevre Düzenlemesi",
       img: {
         width: 600,
         height: 400,
@@ -269,40 +269,40 @@ export const lagomData: ProjectPageData = {
       },
       content: (
         <>
-          <p>• Фасадні системи від провідних європейських виробників (Laminam, Rockwool, STO, Baumit), декоративне оздоблення з екологічних матеріалів</p>
-          <p>• Архітектурна підсвітка від бренду Luminal — одного з лідерів у своїй сфері</p>
-          <p>• Власне заднє подвір’я, огороджене довкола. Оцинкований металевий паркан.</p>
-          <p>• Дві власних еко-парковки з бруківки-георешітки для кожного будинку.</p>
+          <p>{"• Avrupa'nın önde gelen üreticilerinden (Laminam, Rockwool, STO, Baumit) cephe sistemleri, çevre dostu malzemelerden dekoratif kaplamalar"}</p>
+          <p>• Sektörün liderlerinden Luminal marka mimari aydınlatma</p>
+          <p>• Çevresi kapalı müstakil arka bahçe. Galvanizli metal çit.</p>
+          <p>• Her ev için çim taşı/geogrid parke taşından iki adet eko-otopark.</p>
         </>
       ),
     },
     {
       index: "04",
-      title: "Наповнення будинку ",
+      title: "Donanım & Ekipmanlar",
       img: { width: 600, height: 400, src: "/images/2025_12_4a5a8007-600x400.webp", sizes: CHAR_SIZES },
       content: (
         <>
-          <p>• Панорамні вікна преміум-класу REHAU Synego+. Металопластиковий профіль товщиною 80 мм, 2-камерні склопакети (3 скла) з енергоефективним наповненням та 7-камерний профіль. Протизламна фурнітура Hoppe Secustik.</p>
-          <p>• Вхідні двері Reynaers з алюмінієвим профілем, трьохконтурним ущільненням та термомостом із зовнішнім мультифункціональним гартованим склом та матовим покриттям.</p>
-          <p>• Кожен будинок обладнано вентиляційним каналом для влаштування каміну.</p>
-          <p>• Двоконтурний газовий котел Viessmann.</p>
+          <p>• Premium sınıf REHAU Synego+ panoramik pencereler. 80 mm kalınlığında profil, enerji verimli dolgulu 3 camlı çift katmanlı ısıcam ve 7 odacıklı profil. Hoppe Secustik hırsızlığa karşı korumalı pencere kolları.</p>
+          <p>• Reynaers alüminyum profilli, üç contalı, ısı yalıtımlı ve dışı çok işlevli temperli mat camlı giriş kapısı.</p>
+          <p>• Her evde şömine kurulumuna uygun havalandırma kanalı mevcuttur.</p>
+          <p>• Çift devreli Viessmann yoğuşmalı gaz kazanı.</p>
         </>
       ),
     },
     {
       index: "05",
-      title: "Безпека",
+      title: "Güvenlik (Sığınak)",
       img: { width: 533, height: 400, src: "/images/2025_12_img_7534-scaled-533x400.webp", sizes: CHAR_SIZES },
       content: (
-        <p>Кожен будинок оснащений безпечною кімнатою, де кожна стіна – бетонна, а її основа закладена ще на етапі фундаменту.</p>
+        <p>Her ev, tüm duvarları betonarme olan ve temeli inşaat aşamasında atılan güvenli bir sığınak odası ile donatılmıştır.</p>
       ),
     },
     {
       index: "06",
-      title: "Подарунок від LAGOM",
+      title: "LAGOM'dan Hediye",
       img: { width: 600, height: 400, src: "/images/2025_12_ph_romacayman-102-600x400.webp", sizes: CHAR_SIZES },
       content: (
-        <p>Мансардний поверх площею 39-54 м2, який дозволить втілити Ваші найсміливіші дизайнерські рішення.</p>
+        <p>En cesur tasarım fikirlerinizi hayata geçirmenizi sağlayacak 39-54 m² alana sahip çatı katı katı.</p>
       ),
     },
   ],
@@ -313,138 +313,136 @@ export const uniqueData: ProjectPageData = {
   introLogo: UNIQUE_LOGO,
   introTitle: (
     <>
-      <strong>Резиденції з видом на озеро</strong>
-      де простір визначають спокій і свобода
-      <br style={{ fontWeight: 400 }} />
-      <br style={{ fontWeight: 400 }} />
+      <strong>Göl Manzaralı Rezidanslar</strong>
+      <br />Huzur ve Özgürlüğün Şekillendirdiği Alan
     </>
   ),
   heroDesktopSrcSet: kvSrcSet("2026_02_unique-kv-desktop"),
-  heroAlt: "Резиденції з видом на озеро, де простір визначають спокій і свобода",
+  heroAlt: "Huzur ve özgürlüğün şekillendirdiği göl manzaralı rezidanslar",
   previewMobileSrcSet: previewSrcSet("2026_02_unique-kv-mobile"),
-  previewTitle: "Архітектура для тих, хто не шукає компромісів",
+  previewTitle: "Taviz vermeyenler için mimari",
   descriptionTitle: (
     <>
-      <strong>Приватність, закладена в основу простору.</strong>
+      <strong>Gizlilik, alanın temelinde yer alır.</strong>
       <br />
-      Проєкт в процесі реалізації.
+      Proje yapım aşamasındadır.
     </>
   ),
   stats: [
     {
-      prefix: "від",
+      prefix: "min ",
       value: " 300 ",
       suffix: (
         <strong>
-          м<sup>2</sup>
+          m<sup>2</sup>
         </strong>
       ),
-      top: { prefix: "до ", value: "350" },
-      name: "Площа будинків",
+      top: { prefix: "max ", value: "350" },
+      name: "Villa Alanı",
     },
-    { value: "8-10", suffix: <strong> сот</strong>, name: "Площа ділянок" },
-    { value: "14", suffix: <strong> резиденцій</strong>, name: "Кількість" },
-    { prefix: "від ", value: "2400 ", suffix: <strong>$</strong>, name: "За квадратний метр" },
+    { value: "8-10", suffix: <strong> ar</strong>, name: "Arsa Alanı" },
+    { value: "14", suffix: <strong> rezidans</strong>, name: "Toplam Sayı" },
+    { prefix: "", value: "2400 ", suffix: <strong>{"$ / m²'den başlayan"}</strong>, name: "Metrekare Fiyatı" },
   ],
   videoSrc: "/videos/unique-hd.mp4",
   videoSrcMob: "/videos/unique-shorts.mp4",
-  overviewTitle: "Чому варто обрати UNIQUE?",
+  overviewTitle: "Neden UNIQUE Rezidanslarını Seçmelisiniz?",
   gallery: [
     {
-      title: "Локація",
-      description: "Котеджне містечко біля озера з 3-ма гектарами зелених зон.",
+      title: "Konum",
+      description: "Göl kenarında ve 3 hektarlık yeşil alana sahip villa kent.",
       media: { kind: "image", img: galleryImg("2025_05_lokacziya-nich") },
     },
     {
-      title: "Безпека",
+      title: "Güvenlik",
       description:
-        "Цілодобова охорона та сучасне відеоспостереження, освітлення території, контроль доступу Face ID, автоворота й шлагбауми для вашого комфорту.",
+        "7/24 koruma ve modern video gözetim, alan aydınlatması, Face ID erişim kontrolü, otomatik kapılar and bariyerler.",
       media: { kind: "image", img: galleryImg("2025_05_lokacziya-den") },
     },
     {
-      title: "Дозвілля",
+      title: "Sosyal Aktiviteler",
       description:
-        "Велика територія понад 16 гектарів, власна набережна, дитячі майданчики, спортзал, тенісний корт, баскетбол, велодоріжки та workout-зони - все для активного відпочинку.",
+        "16 hektardan fazla alan, özel sahil şeridi, çocuk oyun alanları, spor salonu, tenis kortu, basketbol sahası, bisiklet yolları ve workout alanları.",
       media: GALLERY_VIDEO,
     },
   ],
   mediaTitle: (
     <>
-      <strong>Архітектура, що надихає:</strong>
+      <strong>İlham Veren Mimari:</strong>
       <br />
-      естетика та практичність у скандинавському стилі
+      İskandinav Tarzında Estetik ve Pratiklik
     </>
   ),
-  mediaTabs: [{ id: "tab_0", label: "Проєкт", images: UNIQUE_MEDIA_PROJECTS }],
+  mediaTabs: [{ id: "tab_0", label: "Proje", images: UNIQUE_MEDIA_PROJECTS }],
   characteristics: [
     {
       index: "01",
-      title: "Інженерні мережі",
+      title: "Altyapı Şebekeleri",
       img: { width: 600, height: 400, src: "/images/2025_12_pexels-pixabay-257736-600x400.webp", sizes: CHAR_SIZES },
       content: (
         <>
-          Усі центральні:
-          <p>• Водопостачання та каналізація;</p>
-          <p>• Електроенергія 21 кВт;</p>
-          <p>• Газопостачання;</p>
+          Tüm merkezi altyapı bağlantıları:
+          <p>• Su temini ve kanalizasyon;</p>
+          <p>• 21 kW elektrik gücü;</p>
+          <p>• Doğal gaz bağlantısı;</p>
         </>
       ),
     },
     {
       index: "02",
-      title: "Технологія будівництва",
+      title: "İnşaat Teknolojisi",
       img: { width: 600, height: 400, src: "/images/2025_12_at__0805-600x400.webp", sizes: CHAR_SIZES },
       content: (
         <>
-          <p>• Утеплений та гідроізольований монолітний залізобетонний фундамент.</p>
-          <p>• Цегляні стіни. Передбачена додаткова шумоізоляція між будинками.</p>
-          <p>• Залізобетонне перекриття. Утеплення екструдованим пінопластом зі стяжкою під ухилом та гідроізоляцією з ПВХ-мембрани Sika.</p>
+          <p>• Isı ve su yalıtımlı monolitik betonarme temel.</p>
+          <p>• Tuğla duvarlar. Binalar arasında ilave ses yalıtımı.</p>
+          <p>• Betonarme döşeme. Sika PVC membran ile su yalıtımı ve eğim şapı üzerine ekstrüde polistiren (XPS) ısı yalıtımı.</p>
         </>
       ),
     },
     {
       index: "03",
-      title: "Екстер’єр та територія",
+      title: "Dış Cephe & Çevre Düzenlemesi",
       img: { width: 600, height: 338, src: "/images/2025_12_typ-a-2-4-6-8-11-13-siryj-cyr-600x338.webp", sizes: CHAR_SIZES },
       content: (
         <>
-          <p>• Вентильований фасад з Італійського широкоформатного керамограніту та натурального каменю з Іспанії.</p>
-          <p>• Архітектурна підсвітка від бренду Luminal — одного з лідерів у своїй сфері</p>
-          <p>• Власне заднє подвір’я, огороджене довкола. Оцинкований металевий паркан.</p>
-          <p>• Власна тераса з терасної дошки</p>
-          <p>• Тропічний душ на власному задньому подвір’ї</p>
-          <p>• Встановлення навісу для 2 авто, залізобетонні опори та перекриття.</p>
+          <p>• İtalyan büyük ebat porselen seramik ve İspanyol doğal taşından havalandırmalı dış cephe.</p>
+          <p>• Sektörün liderlerinden Luminal marka mimari aydınlatma</p>
+          <p>• Çevresi kapalı müstakil arka bahçe. Galvanizli metal çit.</p>
+          <p>• Özel ahşap/kompozit deck kaplama bahçe terası</p>
+          <p>• Müstakil arka bahçede tropikal duş</p>
+          <p>• Betonarme taşıyıcılar ve döşeme ile 2 araçlık otopark sundurması.</p>
         </>
       ),
     },
     {
       index: "04",
-      title: "Наповнення будинку",
+      title: "Donanım & Ekipmanlar",
       img: { width: 320, height: 400, src: "/images/2025_12_typ-a-2-4-6-8-11-13-siryj-cyr-320x400.webp", sizes: CHAR_SIZES },
       content: (
         <>
-          <p>• Панорамні алюмінієві вікна преміум-класу Reynaers MasterLine 8</p>
-          <p>• Вхідні двері Reynaers з алюмінієвим профілем, трьохконтурним ущільненням та термомостом.</p>
-          <p>• Кожен будинок обладнано вентиляційним каналом для влаштування каміну.</p>
-          <p>• В плиті перекриття будинку закладені мережі вентиляції.</p>
-          <p>• Двоконтурний газовий котел Vaillant.</p>
+          <p>• Premium sınıf Reynaers MasterLine 8 panoramik alüminyum pencereler</p>
+          <p>• Reynaers alüminyum profilli, üç contalı ve ısı yalıtımlı giriş kapısı.</p>
+          <p>• Her evde şömine kurulumuna uygun havalandırma kanalı mevcuttur.</p>
+          <p>• Kat döşeme plağında hazır havalandırma kanalları döşenmiştir.</p>
+          <p>• Çift devreli Vaillant yoğuşmalı gaz kazanı.</p>
         </>
       ),
     },
     {
       index: "05",
-      title: "Безпека",
+      title: "Güvenlik (Sığınak)",
       img: { width: 533, height: 400, src: "/images/2025_12_img_7534-scaled-533x400.webp", sizes: CHAR_SIZES },
       content: (
-        <p>Кожен будинок оснащений безпечною кімнатою, де кожна стіна – бетонна, а її основа закладена ще на етапі фундаменту.</p>
+        <p>Her ev, tüm duvarları betonarme olan ve temeli inşaat aşamasında atılan güvenli bir sığınak odası ile donatılmıştır.</p>
       ),
     },
     {
       index: "06",
-      title: "Зовнішній підігрів",
+      title: "Dış Mekan Isıtma",
       img: { width: 600, height: 322, src: "/images/2025_12_14215-oblozhka-600x322.webp", sizes: CHAR_SIZES },
       content: (
-        <p>Стежка з бруківки, що веде до вашого дому, завжди залишатиметься сухою та чистою завдяки передбаченому вуличному підігріву.</p>
+        <p>Evinize giden parke taş döşeli yürüyüş yolu, entegre dış mekan ısıtma sistemi sayesinde her zaman kuru ve kardan arınmış kalacaktır.</p>
       ),
     },
   ],

@@ -35,7 +35,7 @@ export function ProjectPreview({ data }: { data: ProjectPageData }) {
         <div className="container-content flex-v">
           <div className="location">
             <div className="icon icon-location"></div>
-            <p>м. Львів, Бічна вул. Стрийська (с. Сокільники)</p>
+            <p>Lviv, Stryiska Caddesi Yanı (Sokilnyky Köyü)</p>
           </div>
           <h2 className="location-title mulish-80">{data.previewTitle}</h2>
         </div>

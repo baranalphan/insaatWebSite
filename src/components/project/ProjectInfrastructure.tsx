@@ -18,7 +18,7 @@ export function ProjectInfrastructure() {
           001
         </div>
         <div className="container-content" data-speed="1.1">
-          <RevealText as="h2" className="mulish-80" text="Міська інфраструктура" />
+          <RevealText as="h2" className="mulish-80" text="Şehir Altyapısı" />
         </div>
         <FadeIn className="container-map" fade="up" data-google-map="">
           <div

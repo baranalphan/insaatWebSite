@@ -14,9 +14,9 @@ import { ProjectCharacteristics } from "@/components/project/ProjectCharacterist
 import { ProjectCtaForm } from "@/components/project/ProjectCtaForm";
 
 export const metadata: Metadata = {
-  title: "LAGOM: Котеджне містечко біля озера на околиці Львова",
+  title: "LAGOM: Lviv Yakınlarında Göl Kenarında Villa Kent",
   description:
-    "Містечко поблизу Львова, с. Сокільники. Безвідсоткове розтермінування. ✓Безпека території, ✓професійний ландшафт, ✓власна управляюча. 093 606 0300",
+    "Lviv yakınlarında, Sokilnyky köyünde göl kenarında villa kent. Faizsiz taksit imkanı. ✓Güvenli bölge, ✓profesyonel peyzaj, ✓kendi yönetim şirketi. 093 606 0300",
 };
 
 export default function LagomPage() {

@@ -45,7 +45,7 @@ export function PopupProvider({ children }: { children: React.ReactNode }) {
       <div className={`popup popup-video${video ? " active" : ""}`} data-popup-name="video">
         <div className="back-close" onClick={closeAll} />
         <div className="popup-content flex-v">
-          <button className="form-close flex icon-close" aria-label="Закрити" onClick={closeAll} />
+          <button className="form-close flex icon-close" aria-label="Kapat" onClick={closeAll} />
           <div className={`video-player${video?.type === "shorts" ? " shorts" : ""}`}>
             {video && (
               <iframe
@@ -63,9 +63,9 @@ export function PopupProvider({ children }: { children: React.ReactNode }) {
       <div className={`popup popup-callback${callbackOpen ? " active" : ""}`} data-popup-name="callback">
         <div className="back-close" onClick={closeAll} />
         <div className="popup-content flex-v">
-          <button className="form-close flex icon-close" aria-label="Закрити" onClick={closeAll} />
-          <h2 className="title mulish-32">Залиште свої контактні дані</h2>
-          <p className="subtitle">Наш менеджер зв’яжеться з Вами.</p>
+          <button className="form-close flex icon-close" aria-label="Kapat" onClick={closeAll} />
+          <h2 className="title mulish-32">İletişim bilgilerinizi bırakın</h2>
+          <p className="subtitle">Müşteri temsilcimiz sizinle iletişime geçecektir.</p>
           <div className="custom-form">
             <ContactForm onSuccess={openSuccess} />
           </div>
@@ -76,10 +76,10 @@ export function PopupProvider({ children }: { children: React.ReactNode }) {
       <div className={`popup popup-success${successOpen ? " active" : ""}`} data-popup-name="success">
         <div className="back-close" onClick={closeAll} />
         <div className="popup-content flex-v">
-          <button className="form-close flex icon-close" aria-label="Закрити" onClick={closeAll} />
+          <button className="form-close flex icon-close" aria-label="Kapat" onClick={closeAll} />
           <div className="icon" />
-          <h2 className="title mulish-32">Запит успішно надісланий</h2>
-          <Btn label="Повернутись на головну" className="cta" onClick={closeAll} ariaLabel="Повернутись на головну" />
+          <h2 className="title mulish-32">Talebiniz başarıyla gönderildi</h2>
+          <Btn label="Ana sayfaya dön" className="cta" onClick={closeAll} ariaLabel="Ana sayfaya dön" />
         </div>
       </div>
     </PopupContext.Provider>
@@ -110,7 +110,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
             className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
             aria-required="true"
             required
-            placeholder="Ім'я*"
+            placeholder="Adınız*"
             type="text"
             name="user_name"
             value={name}
@@ -134,7 +134,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
           />
         </span>
       </label>
-      <Btn label="Отримати консультацію" className="submit" type="submit" ariaLabel="Отримати консультацію" />
+      <Btn label="Bilgi Alın" className="submit" type="submit" ariaLabel="Bilgi Alın" />
     </form>
   );
 }

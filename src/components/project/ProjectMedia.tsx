@@ -74,14 +74,14 @@ function MediaSlider({ tab, active }: { tab: MediaTab; active: boolean }) {
               <div className="icon"></div>
               <div className="cta-text">
                 <div className="t">
-                  <span>Назад</span>
+                  <span>Geri</span>
                 </div>
               </div>
             </button>
             <button ref={nextRef} className="cta cta-next" data-nav="">
               <div className="cta-text">
                 <div className="t">
-                  <span>Вперед</span>
+                  <span>İleri</span>
                 </div>
               </div>
               <div className="icon"></div>

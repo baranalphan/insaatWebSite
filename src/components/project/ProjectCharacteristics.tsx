@@ -10,7 +10,7 @@ export function ProjectCharacteristics({ data }: { data: ProjectPageData }) {
         </div>
 
         <div className="container-content">
-          <RevealText as="h2" className="mulish-64" text="Технічні характеристики" />
+          <RevealText as="h2" className="mulish-64" text="Teknik Özellikler" />
         </div>
 
         <div className="container-list flex-v" role="list">

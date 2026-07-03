@@ -3,11 +3,11 @@ import { FooterLogoSvg } from "./FooterLogoSvg";
 import { SocialIcons } from "./SocialIcons";
 
 const NAV = [
-  { href: "/", label: "Головна" },
+  { href: "/", label: "Ana Sayfa" },
   { href: "/lagom", label: "LAGOM" },
   { href: "/unique", label: "UNIQUE" },
-  { href: "/contacts", label: "Контакти" },
-  { href: "/privacy-policy", label: "Політика конфіденційності" },
+  { href: "/contacts", label: "İletişim" },
+  { href: "/privacy-policy", label: "Gizlilik Politikası" },
 ];
 
 export function SiteFooter() {
@@ -18,11 +18,11 @@ export function SiteFooter() {
           <div className="logo">
             <FooterLogoSvg />
           </div>
-          <p>Девелопер, що створює продумані простори від ідеї до реалізації.</p>
+          <p>Fikirden uygulamaya kadar iyi düşünülmüş alanlar yaratan geliştirici.</p>
         </div>
 
         <div className="footer-pages flex-v">
-          <p className="nav-title">Меню</p>
+          <p className="nav-title">Menü</p>
           <ul className="mulish-32">
             {NAV.map((item) => (
               <li key={item.href} className="menu-item">
@@ -34,7 +34,7 @@ export function SiteFooter() {
 
         <div className="footer-contacts flex-v">
           <div className="top">
-            <p className="nav-title">Контакти</p>
+            <p className="nav-title">İletişim</p>
             <a className="tell mulish-24" href="tel:380936060300">
               +38 093 60 60 300
             </a>
@@ -43,7 +43,7 @@ export function SiteFooter() {
             </a>
           </div>
           <div className="bottom flex-v">
-            <p className="nav-title">Соціальні мережі</p>
+            <p className="nav-title">Sosyal Medya</p>
             <SocialIcons />
           </div>
         </div>
@@ -57,8 +57,7 @@ export function SiteFooter() {
         <div className="footer-line" />
         <div className="footer-sub">
           <p className="mulish-24-regular">
-            Компанія Lagom Development бере на себе зобовʼязання допомагати благодійним фондам, які
-            підтримують Збройні сили України, соціальні проєкти та проєкти відбудови інфраструктури.
+            {"Lagom Development şirketi, Ukrayna Silahlı Kuvvetleri'ni destekleyen yardım kuruluşlarına, sosyal projelere ve altyapı yeniden yapılandırma projelerine yardım etmeyi taahhüt eder."}
           </p>
         </div>
       </div>

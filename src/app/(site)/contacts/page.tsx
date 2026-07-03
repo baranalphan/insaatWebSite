@@ -3,9 +3,9 @@ import "@/styles/site-contacts.css";
 import { ContactsLocations } from "@/components/contacts/ContactsLocations";
 
 export const metadata: Metadata = {
-  title: "Lagom Development: Контакти",
+  title: "Lagom Development: İletişim",
   description:
-    "Запишіться на огляд вашого майбутнього будинку вже сьогодні +38 093 60 60 300! Життя у гармонії - життя у LAGOM!",
+    "Gelecekteki evinizi görmek için bugünden randevu alın +38 093 60 60 300! Uyum içinde yaşam - LAGOM'da yaşam!",
 };
 
 export default function ContactsPage() {

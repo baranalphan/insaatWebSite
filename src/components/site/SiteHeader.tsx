@@ -8,10 +8,10 @@ import { SocialIcons } from "./SocialIcons";
 import { Btn } from "./Btn";
 
 const NAV = [
-  { href: "/", label: "Головна" },
+  { href: "/", label: "Ana Sayfa" },
   { href: "/lagom", label: "LAGOM" },
   { href: "/unique", label: "UNIQUE" },
-  { href: "/contacts", label: "Контакти" },
+  { href: "/contacts", label: "İletişim" },
 ];
 
 /**
@@ -37,7 +37,10 @@ export function SiteHeader() {
   }, []);
 
   // close the mobile menu on navigation
-  useEffect(() => setOpened(false), [pathname]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setOpened((prev) => (prev ? false : prev));
+  }, [pathname]);
 
   const isCurrent = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -75,10 +78,10 @@ export function SiteHeader() {
             </div>
           </menu>
           <div className="header-cta">
-            <Btn label="Обрати будинок" href="/genplan" variant="orange" icon="line" className="link" />
+            <Btn label="Ev Seçin" href="/genplan" variant="orange" icon="line" className="link" />
             <button
               className={`header-burger${opened ? " active" : ""}`}
-              aria-label="Меню"
+              aria-label="Menü"
               onClick={() => setOpened((v) => !v)}
             >
               <span className="f" />

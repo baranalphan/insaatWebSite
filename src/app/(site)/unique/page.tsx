@@ -14,9 +14,9 @@ import { ProjectCharacteristics } from "@/components/project/ProjectCharacterist
 import { ProjectCtaForm } from "@/components/project/ProjectCtaForm";
 
 export const metadata: Metadata = {
-  title: "Комплекс резиденцій UNIQUE від LAGOM",
+  title: "LAGOM'dan UNIQUE Rezidans Kompleksi",
   description:
-    "Резиденції з видом на озеро на околиці м. Львів. Проєкт преміум-класу. ✓Безпека території, ✓професійний ландшафт, ✓власна управляюча. 073 70 60 300",
+    "Lviv yakınlarında göl manzaralı rezidanslar. Premium sınıf proje. ✓Güvenli bölge, ✓profesyonel peyzaj, ✓kendi yönetim şirketi. 073 70 60 300",
 };
 
 export default function UniquePage() {

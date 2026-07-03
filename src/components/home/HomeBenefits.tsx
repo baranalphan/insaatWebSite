@@ -20,10 +20,10 @@ interface StatSlide {
 const STAT_SLIDES: StatSlide[] = [
   {
     active: false,
-    title: "Проєкти",
+    title: "Projeler",
     count: "33",
-    sub: "тис. м²",
-    description: "Понад 16 тис. м² вже реалізовано, решта – в процесі будівництва.",
+    sub: "bin m²",
+    description: "16 bin m²'den fazlası tamamlandı, geri kalanı inşaat aşamasında.",
     desktopSrcSet:
       "/images/2025_12_kidmom_1-360x676.webp 360w, /images/2025_12_kidmom_1-160x300.webp 160w, /images/2025_12_kidmom_1-545x1024.webp 545w, /images/2025_12_kidmom_1-436x819.webp 436w, /images/2025_12_kidmom_1-240x451.webp 240w, /images/2025_12_kidmom_1-437x820.webp 437w, /images/2025_12_kidmom_1-300x563.webp 300w, /images/2025_12_kidmom_1-213x400.webp 213w, /images/2025_12_kidmom_1-426x800.webp 426w, /images/2025_12_kidmom_1.webp 639w",
     desktopSizes: "(max-width: 1440px) 300px, 426px",
@@ -34,10 +34,10 @@ const STAT_SLIDES: StatSlide[] = [
   },
   {
     active: true,
-    title: "Будинки",
+    title: "Evler",
     count: "140",
-    sub: "здано",
-    description: "Ще понад 240 на етапі забудови та проектування.",
+    sub: "teslim",
+    description: "240'tan fazlası ise inşaat ve tasarım aşamasında.",
     desktopSrcSet:
       "/images/2025_12_green_teritory_2-360x676.webp 360w, /images/2025_12_green_teritory_2-160x300.webp 160w, /images/2025_12_green_teritory_2-545x1024.webp 545w, /images/2025_12_green_teritory_2-436x819.webp 436w, /images/2025_12_green_teritory_2-240x451.webp 240w, /images/2025_12_green_teritory_2-437x820.webp 437w, /images/2025_12_green_teritory_2-300x563.webp 300w, /images/2025_12_green_teritory_2-213x400.webp 213w, /images/2025_12_green_teritory_2-426x800.webp 426w, /images/2025_12_green_teritory_2.webp 639w",
     desktopSizes: "(max-width: 1440px) 300px, 426px",
@@ -48,10 +48,10 @@ const STAT_SLIDES: StatSlide[] = [
   },
   {
     active: false,
-    title: "Благоустрій",
+    title: "Sosyal Alanlar",
     count: "2,2",
-    sub: "га ",
-    description: "Власна набережна, алеї для прогулянок, дитячі, спортивні та відпочинкові зони.",
+    sub: "hektar ",
+    description: "Özel sahil şeridi, yürüyüş yolları, çocuk, spor ve dinlenme alanları.",
     desktopSrcSet:
       "/images/2025_12_playyard_3-360x676.webp 360w, /images/2025_12_playyard_3-160x300.webp 160w, /images/2025_12_playyard_3-545x1024.webp 545w, /images/2025_12_playyard_3-436x819.webp 436w, /images/2025_12_playyard_3-240x451.webp 240w, /images/2025_12_playyard_3-437x820.webp 437w, /images/2025_12_playyard_3-300x563.webp 300w, /images/2025_12_playyard_3-213x400.webp 213w, /images/2025_12_playyard_3-426x800.webp 426w, /images/2025_12_playyard_3.webp 639w",
     desktopSizes: "(max-width: 1440px) 300px, 426px",
@@ -92,7 +92,7 @@ export function HomeBenefits() {
           />
         </div>
         <div className="container-text" data-speed="1.1">
-          <RevealText as="h2" className="mulish-80" text="Продумані простори для життя поруч з природою" />
+          <RevealText as="h2" className="mulish-80" text="Doğayla iç içe, yaşam için iyi düşünülmüş alanlar" />
         </div>
         <button
           ref={videoButtonRef}

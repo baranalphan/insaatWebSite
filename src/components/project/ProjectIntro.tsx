@@ -19,7 +19,7 @@ export function ProjectIntro({ data }: { data: ProjectPageData }) {
         <div className="container-content flex-v">
           <h1 className="mulish-32-regular">{data.introTitle}</h1>
           <Btn
-            label="Отримати консультацію"
+            label="Bilgi Alın"
             href="#callback"
             onClick={(e) => {
               e.preventDefault();
@@ -30,7 +30,7 @@ export function ProjectIntro({ data }: { data: ProjectPageData }) {
         <div className="container-location">
           <div className="location">
             <div className="icon icon-location"></div>
-            <p className="inter-20">м. Львів, Бічна вул. Стрийська (с. Сокільники)</p>
+            <p className="inter-20">Lviv, Stryiska Caddesi Yanı (Sokilnyky Köyü)</p>
           </div>
         </div>
         <div className="hero flex-c" data-hero="">

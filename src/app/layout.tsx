@@ -3,9 +3,9 @@ import "./globals.css";
 import "../styles/site-index.css";
 
 export const metadata: Metadata = {
-  title: "Будівельна компанія LAGOM: Продаж будинків поблизу Львова",
+  title: "LAGOM İnşaat Şirketi: Lviv Yakınlarında Satılık Villalar",
   description:
-    "Котеджі комфорт та преміум класу. ✓Безпека території, ✓професійний ландшафт, ✓власна управляюча компанія, ✓ергономічні планування. 093 606 0300",
+    "Konfor ve premium sınıf villalar. ✓Güvenli bölge, ✓profesyonel peyzaj, ✓kendi yönetim şirketi, ✓ergonomik planlama. 093 606 0300",
   icons: {
     icon: [
       { url: "/seo/favicon.webp", sizes: "32x32" },
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk">
+    <html lang="tr">
       <body>{children}</body>
     </html>
   );

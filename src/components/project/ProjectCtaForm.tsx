@@ -26,12 +26,12 @@ export function ProjectCtaForm() {
           </div>
         </div>
         <div className="container-form flex-v">
-          <RevealText text="Хочете дізнатись більше?" as="h2" className="mulish-64" />
+          <RevealText text="Daha fazla bilgi edinmek ister misiniz?" as="h2" className="mulish-64" />
           <FadeIn className="custom-form" fade="up" data-cf7="">
             <ContactForm onSuccess={openSuccess} />
           </FadeIn>
           <p className="form-description">
-            Залиште контакти і ми зв&rsquo;яжемось з вами для консультації.
+            İletişim bilgilerinizi bırakın, danışmanlık için sizinle iletişime geçelim.
           </p>
         </div>
       </div>

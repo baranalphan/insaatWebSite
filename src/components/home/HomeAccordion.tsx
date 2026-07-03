@@ -12,51 +12,50 @@ interface AccordionItem {
 
 const ITEMS: AccordionItem[] = [
   {
-    title: "Благоустрій території",
+    title: "Çevre Düzenleme & Hizmetler",
     content: (
       <p>
-        УК &quot;Дім Лаґом&quot;:
+        Yönetim Şirketi &quot;DİM LAGOM&quot;:
         <br />
         <br />
-        • Забезпечує збереження зовнішнього вигляду містечка
+        • Villa kentin estetik dış görünümünün korunmasını sağlar
         <br />
         <br />
-        • Забезпечує прибирання вулиць, сортування сміття
+        • Sokak temizliği ve çöp ayrıştırma hizmetlerini yürütür
         <br />
         <br />
-        • Контролює справність освітлення вулиць та оперативно усуває несправності
+        • Sokak aydınlatmalarının çalışmasını kontrol eder ve arızaları hızla giderir
         <br />
         <br />
-        • Виконує поточні ремонти
+        • Rutin bakım ve onarımları gerçekleştirir
         <br />
         <br />
-        • Дбає про дитячі та спортивні зони для вашого комфорту та якісного дозвілля мешканців.
+        • Sakinlerin konforu ve kaliteli vakit geçirmesi için çocuk oyun ve spor alanlarının bakımını yapar.
       </p>
     ),
   },
   {
-    title: "Безпека",
+    title: "Güvenlik",
     content: (
       <p>
-        Регулярні перевірки системи контрольованого доступу, відеоспостереження та системи резервного живлення
-        гарантують спокій мешканців.
+        Kontrollü geçiş sistemi, video gözetim ve yedek güç sisteminin düzenli kontrolleri sakinlerin huzurunu garanti eder.
       </p>
     ),
   },
   {
-    title: "Підтримка ландшафтного дизайну",
+    title: "Peyzaj ve Bahçe Bakımı",
     content: (
       <p>
-        Включає:
+        Şunları içerir:
         <br />
         <br />
-        • Догляд за рослинами
+        • Bitki ve ağaç bakımı
         <br />
         <br />
-        • Підтримка акуратності газону
+        • Çimlerin düzenli biçilmesi ve bakımı
         <br />
         <br />
-        • Очищення території від снігу.
+        • Kar temizleme hizmetleri.
       </p>
     ),
   },
@@ -72,7 +71,7 @@ export function HomeAccordion() {
     <section className="accordion">
       <div className="container md-space">
         <div className="container-text" data-speed="1.1">
-          <RevealText as="h2" className="mulish-64" text="Управляюча компанія" />
+          <RevealText as="h2" className="mulish-64" text="Yönetim Şirketi" />
         </div>
         <button
           ref={videoButtonRef}

@@ -16,16 +16,16 @@ interface ContactLocation {
 const LOCATIONS: ContactLocation[] = [
   {
     id: "ChIJP4Ew5jbmOkcRd9qHk4uWpEg",
-    title: "Котеджне містечко LAGOM",
-    address: "вулиця Січових Стрільців, 34, Сокільники, Львівська область, Україна, 81130",
+    title: "LAGOM Villa Kent",
+    address: "Sichovykh Striltsiv Caddesi, 34, Sokilnyky, Lviv Oblastı, Ukrayna, 81130",
     tel: "093 60 60 300",
     telHref: "tel:0936060300",
     pin: { left: "55%", top: "40%" },
   },
   {
     id: "ChIJF-trEwDnOkcRRtMPXHdR6pY",
-    title: "Комплекс резиденцій UNIQUE",
-    address: "вулиця Січових Стрільців, 251, Сокільники, Львівська область, Україна, 81130",
+    title: "UNIQUE Rezidans Kompleksi",
+    address: "Sichovykh Striltsiv Caddesi, 251, Sokilnyky, Lviv Oblastı, Ukrayna, 81130",
     tel: "073 70 60 300",
     telHref: "tel:0737060300",
     pin: { left: "45%", top: "55%" },
@@ -64,7 +64,7 @@ export function ContactsLocations() {
       <div className="container md-space">
         <div className="container-index">004</div>
         <div className="container-content">
-          <h1 className="mulish-64">Контакти</h1>
+          <h1 className="mulish-64">İletişim</h1>
         </div>
         <div className="container-locations flex-v">
           <div className="scroller flex-v" data-scroller-wrapper="">
@@ -76,7 +76,7 @@ export function ContactsLocations() {
                   data-map-card=""
                   data-map-toggle=""
                   data-id={loc.id}
-                  aria-label="Дивитись на карті"
+                  aria-label="Haritada Gör"
                   onClick={() => setActiveId(loc.id)}
                 >
                   <p className="title inter-20-semi">{loc.title}</p>
@@ -91,7 +91,7 @@ export function ContactsLocations() {
                     </div>
                   </div>
                   <span className="btn on-map inter-16-semi" aria-hidden="true">
-                    <OnMapText label="Дивитись на карті" />
+                    <OnMapText label="Haritada Gör" />
                     <div className="icon icon-arrow"></div>
                   </span>
                 </button>
@@ -128,11 +128,11 @@ export function ContactsLocations() {
           </div>
         </div>
         <div className="container-form flex-v">
-          <h2 className="mulish-50">Хочете дізнатись більше?</h2>
+          <h2 className="mulish-50">Daha fazla bilgi edinmek ister misiniz?</h2>
           <div className="custom-form" data-cf7="">
             <ContactForm onSuccess={openSuccess} />
           </div>
-          <p className="form-description">Залиште контакти і ми зв&rsquo;яжемось з вами для консультації.</p>
+          <p className="form-description">İletişim bilgilerinizi bırakın, bilgi almak için sizinle iletişime geçelim.</p>
           <div className="form-managers flex-c">
             <div className="items flex-h">
               <div className="item fit-cover"></div>

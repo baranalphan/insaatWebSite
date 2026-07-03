@@ -30,11 +30,11 @@ interface LocationItem {
 const LOCATIONS: LocationItem[] = [
   {
     id: "ChIJuSOkOSrnOkcRU5kAseY8qk8",
-    title: "Котеджне містечко LAGOM",
-    address: "Вулиця Грушевського, 57, Сокільники, Львівська область, Україна, 81130",
+    title: "LAGOM Villa Kent",
+    address: "Hrushevskoho Caddesi, 57, Sokilnyky, Lviv Oblastı, Ukrayna, 81130",
     tel: "093 60 60 300",
     telHref: "tel:0936060300",
-    slideTitle: "КМ LAGOM",
+    slideTitle: "LAGOM",
     slideImg: {
       width: 360,
       height: 203,
@@ -48,8 +48,8 @@ const LOCATIONS: LocationItem[] = [
   },
   {
     id: "ChIJPby1NDbmOkcRgQRSjb6gKPU",
-    title: "Комплекс резиденцій UNIQUE",
-    address: "вулиця Івана Франка, 49, Сокільники, Львівська область, Україна, 81130",
+    title: "UNIQUE Rezidans Kompleksi",
+    address: "Ivana Franka Caddesi, 49, Sokilnyky, Lviv Oblastı, Ukrayna, 81130",
     tel: "073 70 60 300",
     telHref: "tel:0737060300",
     slideTitle: "UNIQUE",
@@ -138,7 +138,7 @@ export function HomeLocations() {
         </div>
         <FadeIn className="container-index">004</FadeIn>
         <FadeIn className="container-locations flex-v" data-speed="1.1">
-          <h3 className="mulish-32">Наші локації</h3>
+          <h3 className="mulish-32">Lokasyonlarımız</h3>
           <div className="scroller" data-scroller-wrapper="">
             <div className="flex-v" data-scroller-content="">
               {LOCATIONS.map((loc, index) => (
@@ -148,7 +148,7 @@ export function HomeLocations() {
                   data-map-card=""
                   data-map-toggle=""
                   data-id={loc.id}
-                  aria-label="Дивитись на карті"
+                  aria-label="Haritada görüntüle"
                   onClick={() => selectLocation(loc.id, index)}
                 >
                   <p className="title inter-20-semi">{loc.title}</p>
@@ -163,7 +163,7 @@ export function HomeLocations() {
                     </div>
                   </div>
                   <span className="btn on-map inter-16-semi" aria-hidden="true">
-                    <OnMapText label="Дивитись на карті" />
+                    <OnMapText label="Haritada görüntüle" />
                     <div className="icon icon-arrow"></div>
                   </span>
                 </button>
@@ -187,7 +187,7 @@ export function HomeLocations() {
             if (loc) setActiveId(loc.id);
           }}
         >
-          <button slot="container-start" className="swiper-nav prev" aria-label="Попередній слайд"></button>
+          <button slot="container-start" className="swiper-nav prev" aria-label="Önceki slayt"></button>
           {LOCATIONS.map((loc) => (
             <SwiperSlide key={loc.id}>
               <div className="swiper-slide-item fit-cover">
@@ -205,11 +205,11 @@ export function HomeLocations() {
               </div>
               <div className="swiper-slide-info flex-v">
                 <p className="mulish-32">{loc.slideTitle}</p>
-                <Btn label="Детальніше" href={loc.href} className="cta" />
+                <Btn label="Detaylar" href={loc.href} className="cta" />
               </div>
             </SwiperSlide>
           ))}
-          <button slot="container-end" className="swiper-nav next" aria-label="Наступний слайд"></button>
+          <button slot="container-end" className="swiper-nav next" aria-label="Sonraki slayt"></button>
         </Swiper>
       </div>
     </section>

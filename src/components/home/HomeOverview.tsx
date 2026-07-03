@@ -14,7 +14,7 @@ export function HomeOverview() {
           <RevealText
             as="h2"
             className="mulish-80"
-            text="Ваш LAGOM — наша турбота"
+            text="Sizin LAGOM'unuz — Bizim Sorumluluğumuz"
             options='{"start": "0% 50%", "end": "100% 50%"}'
           />
         </div>

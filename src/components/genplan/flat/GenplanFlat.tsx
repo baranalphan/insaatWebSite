@@ -11,15 +11,15 @@ export function loadFlats(): Promise<FlatUnit[]> {
 }
 
 const LEVEL_LABELS: Record<string, string> = {
-  "1": "1-й поверх",
-  "2": "2-й поверх",
-  "3": "Мансарда",
+  "1": "1. Kat",
+  "2": "2. Kat",
+  "3": "Çatı Katı",
 };
 
 const SALE_LABELS: Record<string, string> = {
-  "0": "Доступно",
-  "1": "Продано",
-  "2": "Перепродаж від власника",
+  "0": "Satışta",
+  "1": "Satıldı",
+  "2": "Sahibinden Satılık",
 };
 
 function propsOf(unit: FlatUnit): FlatProperty[] {
@@ -64,12 +64,12 @@ export function GenplanFlat({ id }: { id: string }) {
               className="s3d-villa__floor-scroll-subtitle"
               dangerouslySetInnerHTML={{ __html: unit.description ?? "" }}
             />
-            <div className="s3d-villa__floor-scroll-hint">Гортай ↓</div>
+            <div className="s3d-villa__floor-scroll-hint">Kaydır ↓</div>
           </div>
 
           <div className="s3d-villa__floor__title-wrap">
             <div className="s3d-villa__floor__title-wrap__line" />
-            <div className="s3d-villa__floor__title">Котедж №{unit.number}</div>
+            <div className="s3d-villa__floor__title">Villa No: {unit.number}</div>
             <div className="s3d-villa__floor__title-wrap__line" />
           </div>
 
@@ -90,21 +90,21 @@ export function GenplanFlat({ id }: { id: string }) {
                       {unit.price} {String(unit.currencySymbol ?? "$")}
                     </div>
                     <div className="s3d-villa__floor-details__info-price-m2">
-                      {unit.price_m2} $/м²
+                      {unit.price_m2} $/m²
                     </div>
                   </div>
                   <div className="s3d-villa__floor-details__info-list">
                     <div className="s3d-villa__floor-details__info-list-item">
                       <div className="s3d-villa__floor-details__info-list-item__value">{unit.bathrooms}</div>
-                      <div className="s3d-villa__floor-details__info-list-item__title">Ванних кімнат</div>
+                      <div className="s3d-villa__floor-details__info-list-item__title">Banyo</div>
                     </div>
                     <div className="s3d-villa__floor-details__info-list-item">
                       <div className="s3d-villa__floor-details__info-list-item__value">{unit.rooms}</div>
-                      <div className="s3d-villa__floor-details__info-list-item__title">Кімнат</div>
+                      <div className="s3d-villa__floor-details__info-list-item__title">Oda</div>
                     </div>
                     <div className="s3d-villa__floor-details__info-list-item">
                       <div className="s3d-villa__floor-details__info-list-item__value">{unit.area_land}</div>
-                      <div className="s3d-villa__floor-details__info-list-item__title">Площа ділянки</div>
+                      <div className="s3d-villa__floor-details__info-list-item__title">Arsa Alanı</div>
                     </div>
                   </div>
                 </div>
@@ -119,39 +119,39 @@ export function GenplanFlat({ id }: { id: string }) {
                       className={`ButtonWithoutIcon${level === lv ? " active" : ""}`}
                       onClick={() => setLevel(lv)}
                     >
-                      {LEVEL_LABELS[lv] ?? `${lv}-й поверх`}
+                      {LEVEL_LABELS[lv] ?? `${lv}. Kat`}
                     </button>
                   ))}
                 </div>
                 <div className="s3d-villa__floor-explication-screen-slider">
                   <div className="s3d-villa__floor-explication-screen-slide">
-                    {planImg && <img src={planImg} alt={`План — ${LEVEL_LABELS[level] ?? level}`} />}
+                    {planImg && <img src={planImg} alt={`Plan — ${LEVEL_LABELS[level] ?? level}`} />}
                   </div>
                 </div>
                 <div className="s3d-villa__floor-explication-screen-table">
                   <div className="s3d-villa__floor-explication-screen-table-inner">
                     <div className="s3d-villa__floor-explication-screen-table__title">
-                      {LEVEL_LABELS[level] ?? `${level}-й поверх`}
+                      {LEVEL_LABELS[level] ?? `${level}. Kat`}
                     </div>
                     <div className="s3d-villa__floor-explication-screen-info">
                       {rooms.map((room) => (
                         <div key={room.property_id} className="s3d-villa__floor-explication-screen-info-row">
                           <div className="s3d-villa__floor-explication-screen-info-row-title">{room.property_name}</div>
                           <div className="s3d-villa__floor-explication-screen-info-row-blank" />
-                          <div className="s3d-villa__floor-explication-screen-info-row-value">{room.property_flat} м²</div>
+                          <div className="s3d-villa__floor-explication-screen-info-row-value">{room.property_flat} m²</div>
                         </div>
                       ))}
                       <div className="s3d-villa__floor-explication-screen-info-row">
-                        <div className="s3d-villa__floor-explication-screen-info-row-title bold">Площа поверху</div>
+                        <div className="s3d-villa__floor-explication-screen-info-row-title bold">Kat Alanı</div>
                         <div className="s3d-villa__floor-explication-screen-info-row-blank" />
                         <div className="s3d-villa__floor-explication-screen-info-row-value bold">
-                          {levelTotal.toFixed(2)} м²
+                          {levelTotal.toFixed(2)} m²
                         </div>
                       </div>
                       <div className="s3d-villa__floor-explication-screen-info-row">
-                        <div className="s3d-villa__floor-explication-screen-info-row-title bold">Загальна площа</div>
+                        <div className="s3d-villa__floor-explication-screen-info-row-title bold">Toplam Alan</div>
                         <div className="s3d-villa__floor-explication-screen-info-row-blank" />
-                        <div className="s3d-villa__floor-explication-screen-info-row-value bold">{unit.area} м²</div>
+                        <div className="s3d-villa__floor-explication-screen-info-row-value bold">{unit.area} m²</div>
                       </div>
                     </div>
                   </div>
@@ -162,9 +162,9 @@ export function GenplanFlat({ id }: { id: string }) {
 
           <div className="s3d-villa__contact">
             <div className="s3d-villa__contact__content__column">
-              <div className="s3d-villa__contact__form__title">Залишились питання?</div>
+              <div className="s3d-villa__contact__form__title">Sorularınız mı var?</div>
               {sent ? (
-                <p className="s3d-villa__contact__form__success">Запит успішно надісланий</p>
+                <p className="s3d-villa__contact__form__success">Talebiniz başarıyla gönderildi</p>
               ) : (
                 <form
                   data-home-contact=""
@@ -175,24 +175,24 @@ export function GenplanFlat({ id }: { id: string }) {
                   }}
                 >
                   <div className="form-field form-field-input">
-                    <input type="text" name="name" placeholder="Ваше ім'я:*" required />
+                    <input type="text" name="name" placeholder="Adınız:*" required />
                   </div>
                   <div className="form-field form-field-input">
-                    <input type="tel" name="phone" placeholder="Ваш телефон:*" required />
+                    <input type="tel" name="phone" placeholder="Telefonunuz:*" required />
                   </div>
                   <button className="ButtonWithoutIcon" type="submit">
-                    Отримати консультацію
+                    Bilgi Alın
                   </button>
                 </form>
               )}
             </div>
             <div className="s3d-villa__contact__content__column">
-              <div className="s3d-villa__contact-location-intro-item__title">Контакти</div>
+              <div className="s3d-villa__contact-location-intro-item__title">İletişim</div>
               <a className="ButtonWithoutIcon" href="tel:+380936060300">
                 +38 093 60 60 300
               </a>
               <button className="ButtonWithoutIcon js-s3d-flat__3d-tour" type="button" data-href="">
-                Відкрити на карті
+                Haritada Aç
               </button>
             </div>
           </div>

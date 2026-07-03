@@ -1,32 +1,32 @@
 {
  "faq": [
   {
-   "q": "Де знаходиться відділ продажів?",
-   "a": "Відділ продажів знаходиться за адресою: с. Сокільники, вул. Грушевського, Львів, безпосередньо біля будівництва містечка. Ми працюємо за графіком ПН-СБ, 10:00-20:00. Консультації відбуваються за попереднім записом. Контакти відділу продажу 0936060300."
+   "q": "Satış ofisi nerede bulunuyor?",
+   "a": "Satış ofisimiz şu adreste yer almaktadır: Sokilnyky Köyü, Hrushevskoho Caddesi, Lviv; doğrudan villa kent şantiyesinin yanındayız. Çalışma saatlerimiz Pazartesi-Cumartesi 10:00-20:00 arasıdır. Görüşmeler randevu ile gerçekleştirilmektedir. İletişim: 0936060300."
   },
   {
-   "q": "Яка площа найменшого будинку?",
-   "a": "Площа найменшого будинку складає 126 м²."
+   "q": "En küçük villanın alanı ne kadardır?",
+   "a": "En küçük villanın alanı 126 m²'dir."
   },
   {
-   "q": "Які площі ділянок?",
-   "a": "Площа земельних ділянок варіюється від 1,9 до 6 соток — залежно від обраного типу будинку та розташування."
+   "q": "Arsa büyüklükleri ne kadardır?",
+   "a": "Arsaların büyüklüğü, seçilen ev tipine ve konumuna bağlı olarak 1,9 ila 6 ar arasında değişmektedir."
   },
   {
-   "q": "Які умови розтермінування?",
-   "a": "Пропонуємо гнучке безвідсоткове розтермінування до двох років з першим внеском від 30%. Детальні умови можна отримати у відділі продажів або телефоном."
+   "q": "Taksit koşulları nelerdir?",
+   "a": "%30 peşinat ve iki yıla varan vade ile faizsiz, esnek taksit seçenekleri sunuyoruz. Detaylı bilgi satış ofisimizden veya telefonla alınabilir."
   },
   {
-   "q": "Які мережі проведено?",
-   "a": "До будинків підведені всі центральні комунікації:– електроенергія 15кВт– водопостачання– каналізація– газопостачання та двоконтурний газовий котел Viessmann"
+   "q": "Hangi altyapı şebekeleri mevcuttur?",
+   "a": "Villalara tüm merkezi altyapı şebekeleri çekilmiştir: - 15 kW elektrik gücü - Su hattı - Kanalizasyon - Doğal gaz hattı ve çift devreli Viessmann yoğuşmalı gaz kazanı."
   },
   {
-   "q": "Що входить у вартість будинку?",
-   "a": "У вартість входить: – земельна ділянка– будинок з зовнішнім оздобленням– підведені комунікації– благоустрій прибудинкової території– екостоянка для двох автомобілів"
+   "q": "Villa fiyatına neler dahildir?",
+   "a": "Fiyata şunlar dahildir: - Arsa payı - Dış cephesi tamamlanmış villa - Bağlanmış altyapı şebekeleri - Çevre ve bahçe düzenlemesi - İki araçlık eko-otopark alanı."
   },
   {
-   "q": "Чи є вже здані будинки?",
-   "a": "Так, у містечку вже збудовано та здано в експлуатацію 110 будинків."
+   "q": "Teslim edilen villalar var mı?",
+   "a": "Evet, villa kentte 110 adet villa inşa edilerek teslim edilmiştir."
   }
  ],
  "stats": [

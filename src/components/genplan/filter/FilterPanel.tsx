@@ -68,9 +68,9 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
         <div className="s3d-filter__top-sticky">
           <div className="s3d-filter__top">
             <div className="s3d-filter__top-results">
-              <span className="s3d-filter__amount-flat">{results.length}</span> результатів
+              <span className="s3d-filter__amount-flat">{results.length}</span> sonuç
             </div>
-            <button className="s3d-filter__close-wrap" type="button" aria-label="Закрити" onClick={onClose}>
+            <button className="s3d-filter__close-wrap" type="button" aria-label="Kapat" onClick={onClose}>
               ✕
             </button>
           </div>
@@ -79,7 +79,7 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
         {bounds && (
           <>
             <div className="s3d-filter__param">
-              <div className="s3d-filter__param-title">Вартість, $</div>
+              <div className="s3d-filter__param-title">Fiyat, $</div>
               <div className="s3d-filter__range-wrapper">
                 <input
                   type="range"
@@ -96,13 +96,13 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
                   onChange={(e) => setPrice({ ...priceRange, max: Number(e.target.value) })}
                 />
                 <div className="s3d-filter__input-wrapper">
-                  <span>{priceRange.min.toLocaleString("uk-UA")}</span>–<span>{priceRange.max.toLocaleString("uk-UA")}</span>
+                  <span>{priceRange.min.toLocaleString("tr-TR")}</span>–<span>{priceRange.max.toLocaleString("tr-TR")}</span>
                 </div>
               </div>
             </div>
 
             <div className="s3d-filter__param">
-              <div className="s3d-filter__param-title">Площа, м²</div>
+              <div className="s3d-filter__param-title">Alan, m²</div>
               <div className="s3d-filter__range-wrapper">
                 <input
                   type="range"
@@ -125,7 +125,7 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
             </div>
 
             <div className="s3d-filter__param">
-              <div className="s3d-filter__param-title">Кімнат</div>
+              <div className="s3d-filter__param-title">Oda</div>
               <div className="s3d-filter__checkboxes-wrapper">
                 {bounds.rooms.map((r) => (
                   <div key={r} className="Checkbox">
@@ -139,6 +139,7 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
                           const next = new Set(prev);
                           if (next.has(r)) next.delete(r);
                           else next.add(r);
+                          return next;
                           return next;
                         })
                       }
@@ -166,7 +167,7 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
             >
               <div className="s3d-card__header">
                 <div className="s3d-card__status s3d-card__image-info">
-                  {f.sale === "2" ? "Перепродаж від власника" : "Доступно"}
+                  {f.sale === "2" ? "Sahibinden Satılık" : "Satışta"}
                 </div>
               </div>
               <div className="s3d-card__middle">
@@ -175,8 +176,8 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
                 </div>
                 <div className="s3d-card__info-wrapper">
                   <div className="s3d-card__info-label-wrapper">
-                    <div className="s3d-card__info-label">Котедж №{f.number}</div>
-                    <div className="s3d-card__info-label">{f.area} м²</div>
+                    <div className="s3d-card__info-label">Villa No: {f.number}</div>
+                    <div className="s3d-card__info-label">{f.area} m²</div>
                     <div className="s3d-card__info-label">
                       {f.price} {String(f.currencySymbol ?? "$")}
                     </div>

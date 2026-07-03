@@ -45,9 +45,9 @@ export function HomeIntro() {
         </div>
         <FadeIn className="container-arrow" />
         <div className="container-content flex-v" data-speed="clamp(1.2)">
-          <h1 className="mulish-50">Життя у гармонії - життя у LAGOM</h1>
+          <h1 className="mulish-50">{"Uyum İçinde Yaşam - LAGOM'da Yaşam"}</h1>
           <Btn
-            label="Отримати консультацію"
+            label="Bilgi Alın"
             href="#callback"
             onClick={(e) => {
               e.preventDefault();
