@@ -115,7 +115,7 @@ export function useFadeIn<T extends HTMLElement>(ref: RefObject<T | null>): void
   }, [ref]);
 }
 
-type FadeTag = "div" | "section" | "span" | "p" | "ul" | "li" | "a" | "button";
+type FadeTag = "div" | "section" | "span" | "p" | "ul" | "li" | "a" | "button" | "h2" | "h3" | "h4";
 
 interface FadeInProps extends HTMLAttributes<HTMLElement> {
   as?: FadeTag;
