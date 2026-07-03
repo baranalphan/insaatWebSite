@@ -20,7 +20,7 @@ function numeric(value: string | undefined): number {
   return parseFloat((value ?? "0").replace(/\s/g, "")) || 0;
 }
 
-/** Фільтр side panel: price/area ranges + rooms checkboxes over flats.json. */
+/** flats.json üzerinde fiyat/alan aralıkları + oda onay kutularını içeren filtre yan paneli. */
 export function FilterPanel({ open, onClose }: FilterPanelProps) {
   const router = useRouter();
   const [flats, setFlats] = useState<FlatUnit[]>([]);

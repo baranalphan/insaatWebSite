@@ -91,7 +91,7 @@ function OnMapText({ label }: { label: string }) {
  * required). Static map image + absolutely-positioned pins; clicking a location
  * card swaps the matching pin to its active variant.
  */
-// TODO(map-asset): add /images/map-static.webp (custom-styled map screenshot of Сокільники).
+// TODO(map-asset): add /images/map-static.webp (custom-styled map screenshot of Sokilnyky).
 function MapCanvas({ activeId }: { activeId: string | null }) {
   return (
     <div

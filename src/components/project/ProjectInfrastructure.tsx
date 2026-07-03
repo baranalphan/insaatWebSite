@@ -6,7 +6,7 @@ import { FadeIn, RevealText } from "@/components/site/effects";
 import { INFRA_SLIDES } from "./media-data";
 
 /**
- * "Міська інфраструктура" — identical on /lagom and /unique. The original
+ * "Şehir Altyapısı" — identical on /lagom and /unique. The original
  * renders a Google Map behind the slider; we use a static map background.
  */
 // TODO(map-asset): add /images/map-static.webp (custom-styled map screenshot).

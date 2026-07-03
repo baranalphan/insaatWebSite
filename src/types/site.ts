@@ -37,7 +37,7 @@ export interface StatCard {
 
 export interface InfrastructureCard {
   value: string;
-  unit: string; // "хв пішки" | "хв машиною"
+  unit: string; // "dk yürüyüş" | "dk araçla"
   title: string;
   image?: string;
 }
