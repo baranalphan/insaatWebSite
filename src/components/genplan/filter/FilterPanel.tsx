@@ -167,7 +167,7 @@ export function FilterPanel({ open, onClose }: FilterPanelProps) {
             >
               <div className="s3d-card__header">
                 <div className="s3d-card__status s3d-card__image-info">
-                  {f.sale === "2" ? "Sahibinden Satılık" : "Satışta"}
+                  {f.sale === "0" ? "Satıldı" : f.sale === "2" ? "Rezerve" : "Satışta"}
                 </div>
               </div>
               <div className="s3d-card__middle">

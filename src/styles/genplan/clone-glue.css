@@ -197,3 +197,235 @@
   width: 100%;
   height: auto;
 }
+
+/* ---------------- villa page (?type=flat) glue ---------------- */
+
+/* fixed action bar fades in after the hero is scrolled past */
+.s3d-villa__navigation {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 101;
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-out;
+}
+
+.s3d-villa__navigation.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* status badge colors — original computed values per sale state */
+.s3d-villa__floor-details__info-status-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px 4px 12px;
+  border-radius: 4px;
+}
+
+.s3d-villa__floor-details__info-status-wrap[data-sale="1"] {
+  background: #83af8d;
+}
+
+.s3d-villa__floor-details__info-status-wrap[data-sale="2"] {
+  background: #6d6805;
+}
+
+.s3d-villa__floor-details__info-status-wrap[data-sale="0"] {
+  background: #f1b161;
+}
+
+.s3d-villa__floor-details__info-status__svg {
+  fill: var(--text-gray-200, #fafbfe);
+}
+
+/* deferral caption over the card photo bottom (original info-prices-wrap position) */
+.s3d-villa__floor-details__info-img-wrapper {
+  position: relative;
+}
+
+.s3d-villa__floor-details__info-img-wrapper .s3d-villa__floor-details__info-prices-wrap {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  color: var(--text-gray-200, #fafbfe);
+  font-size: 14px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* 3D/2D plan pills */
+.s3d-villa__floor-plan-type-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.s3d-villa__floor-plan-type-toggle .ButtonWithoutIcon.active {
+  background: var(--color-surface-brand-800, #f36c21);
+  color: var(--text-gray-200, #fff);
+}
+
+/* contact column extras */
+.s3d-villa__contact__form__note {
+  font-size: 13px;
+  color: var(--text-gray-600, #6c7a88);
+  margin-bottom: 12px;
+  max-width: 320px;
+}
+
+.s3d-villa__contact form .form-field label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-gray-600, #6c7a88);
+  margin-bottom: 4px;
+}
+
+.s3d-villa__contact form textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.s3d-villa__contact-socials {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.s3d-villa__contact-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0e0e0e;
+}
+
+.s3d-villa__contact-socials a svg {
+  fill: #fff;
+}
+
+.s3d-villa__contact-office__caption {
+  font-size: 12px;
+  color: var(--text-gray-600, #6c7a88);
+  margin-bottom: 4px;
+}
+
+.s3d-villa__contact-office__address {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* static flyby strip at the sheet bottom */
+.s3d-villa__flyby-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.s3d-villa__flyby {
+  position: relative;
+  height: min(56vw, 760px);
+}
+
+.s3d-villa__flyby img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s3d-villa__flyby svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.s3d-villa__flyby polygon.active {
+  pointer-events: none;
+}
+
+.s3d-villa__flyby polygon.active[data-sale="0"] {
+  fill: rgba(231, 71, 58, 0.35);
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 1.5;
+}
+
+.s3d-villa__flyby polygon.active[data-sale="1"],
+.s3d-villa__flyby polygon.active[data-sale="2"] {
+  fill: rgba(131, 175, 141, 0.35);
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 1.5;
+}
+
+.s3d-villa__flyby polygon.active-flat {
+  fill: rgba(131, 175, 141, 0.65) !important;
+  stroke: var(--color-surface-brand-800, #f36c21) !important;
+  stroke-width: 3 !important;
+}
+
+/* up arrow block */
+.s3d-villa__up-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 0 48px;
+  cursor: pointer;
+  background: var(--color-surface-gray-200, #f5f5f5);
+}
+
+.s3d-villa__up-arrow svg {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 50%;
+  background: var(--color-surface-brand-800, #f36c21);
+  fill: #fff;
+}
+
+.s3d-villa__up-arrow span {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+/* hero scroll pill sits at the sheet's top edge */
+.s3d-villa__floor-scroll-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: -72px auto 24px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.s3d-villa__floor-scroll-title {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+
+.s3d-villa__floor-scroll-svg-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.s3d-villa__floor-scroll-svg-wrap svg {
+  width: 20px;
+  height: 20px;
+}

@@ -15,11 +15,23 @@ import {
   FORM_POPUP,
   MASTERPLAN_OVERLAYS,
   FLYBY1_OUTSIDE_OVERLAYS,
+  FLYBY1_INSIDE_OVERLAYS,
+  FLYBY2_OUTSIDE_OVERLAYS,
 } from "./fragments";
 import { FrameViewer } from "./FrameViewer";
 import type { FrameViewerHandle } from "./FrameViewer";
-import { GenplanFlat } from "./flat/GenplanFlat";
+import { GenplanFlat, loadFlats } from "./flat/GenplanFlat";
 import { FilterPanel } from "./filter/FilterPanel";
+import { InfoBox } from "./InfoBox";
+import type { InfoBoxState } from "./InfoBox";
+import { CONTROL_FRAMES, FLYBY_VIEWS } from "./types";
+import type { FlatUnit } from "./types";
+
+const FLYBY_OVERLAYS: Record<string, Record<string, string>> = {
+  "1/outside": FLYBY1_OUTSIDE_OVERLAYS,
+  "1/inside": FLYBY1_INSIDE_OVERLAYS,
+  "2/outside": FLYBY2_OUTSIDE_OVERLAYS,
+};
 
 const MAP_EMBED_URL =
   "https://www.google.com/maps/embed?pb=!1m16!1m10!1m3!1d24513.279878576155!2d23.9967534!3d49.7799323!2m1!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473addb1aaa5b1eb%3A0xa0c14dc40ea69867!2sLagom%20Development!5e0!3m2!1suk!2sua!4v1750325729919!5m2!1suk!2sua";
@@ -46,6 +58,10 @@ export function GenplanApp() {
   const flatId = searchParams.get("id");
   const view: "genplan" | "flyby" | "flat" =
     type === "flyby" ? "flyby" : type === "flat" && flatId ? "flat" : "genplan";
+  const flybyKey = `${searchParams.get("flyby") ?? "1"}/${searchParams.get("side") ?? "outside"}`;
+  const flybyCfg = FLYBY_VIEWS[flybyKey] ?? FLYBY_VIEWS["1/outside"];
+  const controlPointParam = Number(searchParams.get("controlPoint"));
+  const markedFlat = searchParams.get("markedFlat");
 
   const [dark, setDark] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -59,11 +75,27 @@ export function GenplanApp() {
   const [mapOpen, setMapOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const [flybyUnavailable, setFlybyUnavailable] = useState(false);
+  const [infoBox, setInfoBox] = useState<InfoBoxState | null>(null);
 
   const viewerRef = useRef<FrameViewerHandle>(null);
   const rootRef = useRef<HTMLDivElement>(null);
+  const flatsRef = useRef<Map<string, FlatUnit> | null>(null);
 
-  const frameSet = view === "flyby" ? "1_outside" : dark ? "masterplan_dark" : "masterplan";
+  /* unit lookup for the flyby infoBox + click routing */
+  useEffect(() => {
+    void loadFlats().then((flats) => {
+      flatsRef.current = new Map(flats.map((f) => [f.id, f]));
+    });
+  }, []);
+
+  const frameSet = view === "flyby" ? flybyCfg.frameSet : dark ? "masterplan_dark" : "masterplan";
+  const initialFrame =
+    view === "flyby"
+      ? CONTROL_FRAMES.includes(controlPointParam)
+        ? controlPointParam
+        : flybyCfg.defaultFrame
+      : 31;
+  const resetKey = view === "flyby" ? `flyby-${flybyKey}` : "genplan";
 
   /* switching frame sets restarts the preload — show the loader again */
   useEffect(() => {
@@ -109,14 +141,52 @@ export function GenplanApp() {
       const t = btn.getAttribute("data-type");
       const isActive =
         (view === "genplan" && t === "genplan") ||
-        (view === "flyby" && t === "flyby" && btn.getAttribute("data-flyby") === "1" && btn.getAttribute("data-side") === "outside") ||
+        (view === "flyby" &&
+          t === "flyby" &&
+          `${btn.getAttribute("data-flyby")}/${btn.getAttribute("data-side")}` === flybyKey) ||
         (view === "flat" && t === "flat");
       btn.classList.toggle("active", isActive);
     });
     root.querySelectorAll(".s3d__title.js-s3d-ctr__option__text").forEach((el) => {
-      el.textContent = view === "flyby" ? "6. Etap" : view === "flat" ? "Villa" : "Genel Plan";
+      el.textContent =
+        view === "flyby" ? flybyCfg.displayName : view === "flat" ? "Villa" : "Genel Plan";
     });
-  }, [view]);
+  }, [view, flybyKey, flybyCfg]);
+
+  /* --- header "Navigasyon" dropdown + Villa button per view (original s3d2 header JS) --- */
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    const dd = root.querySelector<HTMLElement>("[data-s3d2-header-flyby-dropdown]");
+    const betweenIcon = root.querySelector<HTMLElement>('[data-hide-elements="genplan"]');
+    const villaBtn = root.querySelector<HTMLElement>("[data-header-flat-plan-group]");
+    const inDeepView = view === "flyby" || view === "flat";
+    if (dd) {
+      dd.style.display = inDeepView ? "block" : "none";
+      dd.classList.toggle("highlighted", inDeepView);
+      const title = dd.querySelector("[data-dd-title]");
+      if (title) title.textContent = view === "flyby" ? flybyCfg.displayName : "Navigasyon";
+      dd.querySelectorAll(".Dropdown__item").forEach((item) => {
+        const key = `${item.getAttribute("data-flyby")}/${item.getAttribute("data-side")}`;
+        item.classList.toggle("active", view === "flyby" && key === flybyKey);
+      });
+    }
+    if (betweenIcon) betweenIcon.style.display = inDeepView ? "block" : "none";
+    if (villaBtn) {
+      villaBtn.style.display = view === "flat" ? "block" : "none";
+      villaBtn.classList.toggle("active", view === "flat");
+    }
+  }, [view, flybyKey, flybyCfg]);
+
+  /* --- markedFlat highlight (arriving from villa "3D Modelde") --- */
+  useEffect(() => {
+    if (!markedFlat) return;
+    const root = rootRef.current;
+    if (!root) return;
+    root
+      .querySelectorAll(`.s3d-overlay-host polygon[data-id="${markedFlat}"]`)
+      .forEach((p) => p.classList.add("active-flat"));
+  });
 
   /* --- theme toggle state --- */
   useEffect(() => {
@@ -155,14 +225,19 @@ export function GenplanApp() {
         if (pType === "flyby") {
           const flyby = poly.getAttribute("data-flyby");
           const side = poly.getAttribute("data-side");
-          if (flyby === "1" && side === "outside") navigate("?type=flyby&flyby=1&side=outside");
+          if (FLYBY_VIEWS[`${flyby}/${side}`]) navigate(`?type=flyby&flyby=${flyby}&side=${side}`);
           else {
             console.warn(`flyby ${flyby}/${side} is not available in the clone (no frame captures)`);
             setFlybyUnavailable(true);
           }
         } else if (pType === "flat") {
           const id = poly.getAttribute("data-id");
-          if (id) navigate(`?type=flat&id=${id}`);
+          const sale = poly.getAttribute("data-sale");
+          /* original: only available (1) / reserved (2) units are clickable */
+          if (id && (sale === "1" || sale === "2")) {
+            const cp = controlFrame !== 1 ? `&controlPoint=${controlFrame}` : "";
+            navigate(`?type=flat&id=${id}${cp}`);
+          }
         }
         return;
       }
@@ -264,7 +339,7 @@ export function GenplanApp() {
         else if (t === "flyby") {
           const flyby = nav.getAttribute("data-flyby");
           const side = nav.getAttribute("data-side");
-          if (flyby === "1" && side === "outside") navigate("?type=flyby&flyby=1&side=outside");
+          if (FLYBY_VIEWS[`${flyby}/${side}`]) navigate(`?type=flyby&flyby=${flyby}&side=${side}`);
           else setFlybyUnavailable(true);
         } else {
           console.warn(`view "${t}" is not available in the clone`);
@@ -272,7 +347,26 @@ export function GenplanApp() {
         return;
       }
     },
-    [navigate, router],
+    [navigate, router, controlFrame],
+  );
+
+  /* --- flyby infoBox: populate + follow the cursor over unit polygons --- */
+  const onPointerMove = useCallback(
+    (e: React.PointerEvent) => {
+      if (view !== "flyby") return;
+      const poly = (e.target as HTMLElement).closest?.(
+        'polygon.js-s3d-svg__build[data-type="flat"]',
+      ) as SVGPolygonElement | null;
+      const unit = poly ? flatsRef.current?.get(poly.getAttribute("data-id") ?? "") : undefined;
+      if (unit && (unit.sale === "1" || unit.sale === "2")) {
+        const x = Math.min(e.clientX + 24, window.innerWidth - 296);
+        const y = Math.min(Math.max(e.clientY - 100, 8), window.innerHeight - 480);
+        setInfoBox({ unit, x, y });
+      } else {
+        setInfoBox((prev) => (prev === null ? prev : null));
+      }
+    },
+    [view],
   );
 
   const onSubmitCapture = useCallback((e: React.FormEvent) => {
@@ -280,7 +374,8 @@ export function GenplanApp() {
     setFormOpen(false);
   }, []);
 
-  const overlays = view === "flyby" ? FLYBY1_OUTSIDE_OVERLAYS : MASTERPLAN_OVERLAYS;
+  const overlays =
+    view === "flyby" ? (FLYBY_OVERLAYS[flybyKey] ?? FLYBY1_OUTSIDE_OVERLAYS) : MASTERPLAN_OVERLAYS;
   const overlayHtml = overlays[String(controlFrame)];
   const showOverlay = view !== "flat" && ready && !rotating && overlayHtml !== undefined;
 
@@ -291,6 +386,7 @@ export function GenplanApp() {
       data-type={view}
       data-s3d-touch-mode="mouse"
       onClick={onClick}
+      onPointerMove={onPointerMove}
       onSubmitCapture={onSubmitCapture}
     >
       <span style={{ display: "none" }} dangerouslySetInnerHTML={CHROME} />
@@ -300,6 +396,9 @@ export function GenplanApp() {
           <FrameViewer
             ref={viewerRef}
             frameSet={frameSet}
+            initialFrame={initialFrame}
+            resetKey={resetKey}
+            verticalAlign={view === "flyby" ? flybyCfg.verticalAlign : "top"}
             onProgress={setProgress}
             onReady={() => setReady(true)}
             onRotatingChange={setRotating}
@@ -322,6 +421,8 @@ export function GenplanApp() {
       {view !== "flat" && <div dangerouslySetInnerHTML={CTR_HTML} />}
 
       {view === "flat" && flatId && <GenplanFlat id={flatId} />}
+
+      {view === "flyby" && <InfoBox state={infoBox} />}
 
       <FilterPanel open={filterOpen} onClose={() => setFilterOpen(false)} />
 

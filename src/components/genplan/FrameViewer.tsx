@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useImperativeHandle, useRef, useState, forwardRef } from "react";
 import { FRAME_COUNT, nearestControlFrame } from "./types";
+import type { FrameVerticalAlign } from "./types";
 
 export interface FrameViewerHandle {
   rotate: (dir: 1 | -1) => void;
@@ -10,12 +11,24 @@ export interface FrameViewerHandle {
 interface FrameViewerProps {
   /** e.g. "masterplan" | "masterplan_dark" | "1_outside" */
   frameSet: string;
+  /** frame to show when the view (resetKey) changes */
+  initialFrame?: number;
+  /** identity of the view — frame resets when this changes (NOT on day/night set swap) */
+  resetKey?: string;
+  /** cover-crop side, mirrors the original s3d verticalAlign setting */
+  verticalAlign?: FrameVerticalAlign;
   onProgress: (percent: number) => void;
   onReady: () => void;
   onRotatingChange: (rotating: boolean) => void;
   onSettle: (controlFrame: number, frame: number) => void;
   onFrame?: (frame: number) => void;
 }
+
+const OBJECT_POSITION: Record<FrameVerticalAlign, string> = {
+  top: "50% 0%",
+  bottom: "50% 100%",
+  center: "50% 50%",
+};
 
 const framePath = (set: string, i: number) => `/genplan/flyby/${set}/${i}.jpg`;
 const mod = (n: number) => ((n % FRAME_COUNT) + FRAME_COUNT) % FRAME_COUNT;
@@ -26,12 +39,20 @@ const mod = (n: number) => ((n % FRAME_COUNT) + FRAME_COUNT) % FRAME_COUNT;
  * on the nearest control frame [1,31,61,91].
  */
 export const FrameViewer = forwardRef<FrameViewerHandle, FrameViewerProps>(function FrameViewer(
-  { frameSet, onProgress, onReady, onRotatingChange, onSettle, onFrame },
+  { frameSet, initialFrame = 31, resetKey = "", verticalAlign = "top", onProgress, onReady, onRotatingChange, onSettle, onFrame },
   ref,
 ) {
-  const [frame, setFrame] = useState(31);
+  const [frame, setFrame] = useState(initialFrame);
   const [ready, setReady] = useState(false);
-  const frameRef = useRef(31);
+  const frameRef = useRef(initialFrame);
+
+  /* jumping to another view resets the rotation to that view's start frame */
+  useEffect(() => {
+    frameRef.current = initialFrame;
+    setFrame(initialFrame);
+    onFrame?.(initialFrame);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [resetKey]);
   const rafRef = useRef(0);
   const dragRef = useRef<{ startX: number; startFrame: number; moved: boolean } | null>(null);
 
@@ -156,7 +177,14 @@ export const FrameViewer = forwardRef<FrameViewerHandle, FrameViewerProps>(funct
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerUp}
     >
-      {ready && <img src={framePath(frameSet, frame)} alt="" draggable={false} />}
+      {ready && (
+        <img
+          src={framePath(frameSet, frame)}
+          alt=""
+          draggable={false}
+          style={{ objectPosition: OBJECT_POSITION[verticalAlign] }}
+        />
+      )}
     </div>
   );
 });
