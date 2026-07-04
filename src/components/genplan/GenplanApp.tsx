@@ -382,7 +382,7 @@ export function GenplanApp() {
   return (
     <div
       ref={rootRef}
-      className="s3d-genplan-root"
+      className="s3d-genplan-root mouseOnly"
       data-type={view}
       data-s3d-touch-mode="mouse"
       onClick={onClick}

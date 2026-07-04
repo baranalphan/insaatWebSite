@@ -9,6 +9,15 @@ import {
   FLYBY2_OUTSIDE_OVERLAYS,
 } from "../fragments";
 import flatData from "./flat-data.json";
+import {
+  TILE_ICONS,
+  STATUS_INFO_SVG,
+  NAV_PHONE_INNER,
+  NAV_PDF_INNER,
+  NAV_3D_INNER,
+  UP_ARROW_INNER,
+  SCROLL_DOWN_INNER,
+} from "./villa-icons";
 
 let flatsCache: Promise<FlatUnit[]> | null = null;
 export function loadFlats(): Promise<FlatUnit[]> {
@@ -128,14 +137,15 @@ export function GenplanFlat({ id }: { id: string }) {
     : (levelPhoto?.without ?? unit.images?.without?.["3d"] ?? unit.img);
   const levelTotal = rooms.reduce((sum, r) => sum + (parseFloat(r.property_flat ?? "0") || 0), 0);
 
-  const statTiles: Array<{ value: string; label: string }> = [
-    { value: String(unit.bathrooms ?? ""), label: "Banyo" },
-    { value: String(unit.rooms ?? ""), label: "Oda" },
-    { value: String(unit.area_land ?? ""), label: "Arsa Alanı" },
+  const statTiles: Array<{ value: string; label: string; icon: string }> = [
+    { value: String(unit.bathrooms ?? ""), label: "Banyo", icon: TILE_ICONS.banyo },
+    { value: String(unit.rooms ?? ""), label: "Oda", icon: TILE_ICONS.oda },
+    { value: String(unit.area_land ?? ""), label: "Arsa Alanı", icon: TILE_ICONS.arsa },
   ];
-  if (unit.navis && unit.navis !== "0") statTiles.push({ value: String(unit.navis), label: "Sundurma" });
+  if (unit.navis && unit.navis !== "0")
+    statTiles.push({ value: String(unit.navis), label: "Sundurma", icon: TILE_ICONS.sundurma });
   if (unit.second_light && unit.second_light !== "0")
-    statTiles.push({ value: String(unit.second_light), label: "Galeri Boşluğu" });
+    statTiles.push({ value: String(unit.second_light), label: "Galeri Boşluğu", icon: TILE_ICONS.galeri });
 
   const onScroll = () => {
     const el = villaRef.current;
@@ -156,11 +166,21 @@ export function GenplanFlat({ id }: { id: string }) {
     <div className="s3d-villa" ref={villaRef} onScroll={onScroll}>
       <div className={`s3d-villa__navigation${navVisible ? " visible" : ""}`}>
         <button type="button" className="ButtonIconLeft active ButtonIconLeft--secondary" data-open-form="">
-          <svg className="ButtonIconLeft__icon--no-paints"><use href="#icon-Phone" /></svg>
+          <svg
+            className="ButtonIconLeft__icon--no-paints"
+            viewBox="0 0 24 24"
+            fill="none"
+            dangerouslySetInnerHTML={{ __html: NAV_PHONE_INNER }}
+          />
           <span>Geri Arama</span>
         </button>
         <button type="button" className="ButtonIconLeft js-s3d__create-pdf" onClick={() => window.print()}>
-          <svg className="ButtonIconLeft__icon--no-paints"><use href="#icon-PDF" /></svg>
+          <svg
+            className="ButtonIconLeft__icon--no-paints"
+            viewBox="0 0 24 24"
+            fill="none"
+            dangerouslySetInnerHTML={{ __html: NAV_PDF_INNER }}
+          />
           <span>PDF</span>
         </button>
         <button
@@ -172,7 +192,12 @@ export function GenplanFlat({ id }: { id: string }) {
           <span>{favAdded ? "Karşılaştırmaya eklendi" : "Karşılaştırma"}</span>
         </button>
         <button type="button" className="ButtonIconLeft" onClick={goto3dModel}>
-          <svg className="ButtonIconLeft__icon--no-paints"><use href="#icon-3D" /></svg>
+          <svg
+            className="ButtonIconLeft__icon--no-paints"
+            viewBox="0 0 24 24"
+            fill="none"
+            dangerouslySetInnerHTML={{ __html: NAV_3D_INNER }}
+          />
           <span>3D Modelde</span>
         </button>
       </div>
@@ -196,7 +221,7 @@ export function GenplanFlat({ id }: { id: string }) {
           <a className="s3d-villa__floor-scroll-wrap" onClick={scrollToSheet} role="button">
             <div className="s3d-villa__floor-scroll-title">Kaydır</div>
             <div className="s3d-villa__floor-scroll-svg-wrap">
-              <svg><use href="#icon-Arrow up" transform="rotate(180 12 12)" /></svg>
+              <svg viewBox="0 0 24 24" fill="none" dangerouslySetInnerHTML={{ __html: SCROLL_DOWN_INNER }} />
             </div>
           </a>
 
@@ -211,13 +236,16 @@ export function GenplanFlat({ id }: { id: string }) {
               <div className="s3d-villa__floor-details__info-wrapper">
                 <div className="s3d-villa__floor-details__info-img-wrapper">
                   <img className="s3d-villa__floor-details__info-img" src={unit.img_big ?? unit.img} alt="" />
+                </div>
+                <div className="s3d-villa__floor-details__info">
                   <div className="s3d-villa__floor-details__info-status-wrap" data-sale={unit.sale}>
-                    <div className={`s3d-villa__floor-details__info-status__title status-${unit.sale}`}>
+                    <span className={`s3d-villa__floor-details__info-status__title status-${unit.sale}`}>
                       {SALE_LABELS[unit.sale] ?? SALE_LABELS["1"]}
-                    </div>
-                    <svg className="s3d-villa__floor-details__info-status__svg">
-                      <use href="#icon-Info" />
-                    </svg>
+                    </span>
+                    <div
+                      className="s3d-villa__floor-details__info-status__svg"
+                      dangerouslySetInnerHTML={{ __html: STATUS_INFO_SVG }}
+                    />
                   </div>
                   {unit.deferral_period ? (
                     <div className="s3d-villa__floor-details__info-prices-wrap">
@@ -225,37 +253,44 @@ export function GenplanFlat({ id }: { id: string }) {
                     </div>
                   ) : null}
                 </div>
-                <div className="s3d-villa__floor-details__info">
-                  <div className="s3d-villa__floor-details__info-list">
-                    {statTiles.map((tile) => (
-                      <div key={tile.label} className="s3d-villa__floor-details__info-list-item">
-                        <div className="s3d-villa__floor-details__info-list-item__value">{tile.value}</div>
-                        <div className="s3d-villa__floor-details__info-list-item__title">{tile.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
-
-              <div className="s3d-villa__floor-explication-screen">
-                <div className="s3d-villa__floor-explication-screen-buttons--floor">
-                  {levels.map((lv) => (
-                    <button
-                      key={lv}
-                      type="button"
-                      className={`ButtonWithoutIcon${level === lv ? " active" : ""}`}
-                      onClick={() => setLevel(lv)}
-                    >
-                      {LEVEL_LABELS[lv] ?? `${lv}. Kat`}
-                    </button>
-                  ))}
-                </div>
-                <div className="s3d-villa__floor-explication-screen-slider">
-                  <div className="s3d-villa__floor-explication-screen-slide">
-                    {planImg && <img src={String(planImg)} alt={`Plan — ${LEVEL_LABELS[level] ?? level}`} />}
+              <div className="s3d-villa__floor-details__info-list">
+                {statTiles.map((tile) => (
+                  <div key={tile.label} className="s3d-villa__floor-details__info-list-item">
+                    <div className="s3d-villa__floor-details__info-list-item__svg-group">
+                      <div className="s3d-villa__floor-details__info-list-item__value">{tile.value}</div>
+                      <span dangerouslySetInnerHTML={{ __html: tile.icon }} />
+                    </div>
+                    <div className="s3d-villa__floor-details__info-list-item__title">{tile.label}</div>
                   </div>
-                  {has2d && (
-                    <div className="s3d-villa__floor-plan-type-toggle">
+                ))}
+              </div>
+            </div>
+
+            <div className="s3d-villa__floor-explication-screen">
+              <div className="s3d-villa__floor-explication-screen-buttons--floor">
+                {levels.map((lv) => (
+                  <button
+                    key={lv}
+                    type="button"
+                    className={`ButtonWithoutIcon${level === lv ? " active" : ""}`}
+                    onClick={() => setLevel(lv)}
+                  >
+                    {LEVEL_LABELS[lv] ?? `${lv}. Kat`}
+                  </button>
+                ))}
+              </div>
+              <div className="s3d-villa__floor-explication-screen-slider swiper-container">
+                <div className="swiper-wrapper">
+                  <div className="swiper-slide">
+                    <div className="s3d-villa__floor-explication-screen-slide">
+                      {planImg && <img src={String(planImg)} alt={`Plan — ${LEVEL_LABELS[level] ?? level}`} />}
+                    </div>
+                  </div>
+                </div>
+                {has2d && (
+                  <div className="s3d-villa__floor-explication-screen-buttons--slider">
+                    <div className="s3d-villa__floor-explication-screen-buttons--planning3d">
                       <button
                         type="button"
                         className={`ButtonWithoutIcon${!plan2d ? " active" : ""}`}
@@ -271,9 +306,10 @@ export function GenplanFlat({ id }: { id: string }) {
                         2D Plan
                       </button>
                     </div>
-                  )}
-                </div>
-                <div className="s3d-villa__floor-explication-screen-table">
+                  </div>
+                )}
+              </div>
+              <div className="s3d-villa__floor-explication-screen-table">
                   <div className="s3d-villa__floor-explication-screen-table-inner">
                     <div className="s3d-villa__floor-explication-screen-table__title">
                       {LEVEL_LABELS[level] ?? `${level}. Kat`}
@@ -308,9 +344,8 @@ export function GenplanFlat({ id }: { id: string }) {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="s3d-villa__contact">
+          <div className="s3d-villa__contact" data-contact-section="">
             <div className="s3d-villa__contact__content__column">
               <div className="s3d-villa__contact__form__title">Sorularınız mı var?</div>
               <p className="s3d-villa__contact__form__note">
@@ -400,7 +435,7 @@ export function GenplanFlat({ id }: { id: string }) {
       </div>
 
       <div className="s3d-villa__up-arrow" onClick={scrollToTop} role="button">
-        <svg><use href="#icon-Arrow up" /></svg>
+        <svg viewBox="0 0 24 24" fill="none" dangerouslySetInnerHTML={{ __html: UP_ARROW_INNER }} />
         <span>YUKARI</span>
       </div>
     </div>
